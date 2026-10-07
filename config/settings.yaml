@@ -1,0 +1,131 @@
+# --- Models (all must be on Gemini API's FREE tier) ---
+# The code tries them in order and falls back automatically.
+# Check https://ai.google.dev/gemini-api/docs/pricing for current free models
+# and put the newest Flash / Flash-TTS names at the top of each list.
+text_models:
+  - gemini-2.5-flash
+  - gemini-2.5-flash-lite
+tts_models:
+  - gemini-3.8-flash-tts
+  - gemini-3.1-flash-tts-preview
+  - gemini-2.5-flash-preview-tts
+
+# --- Voice ---
+voice: Charon          # try also: Algenib, Gacrux, Enceladus, Umbriel
+tts_style: "Read the following as a hushed, slow, unsettling late-night confession. Calm voice, short pauses between sentences, never theatrical. Read only the story text:"
+
+# --- WHAT THE CHANNEL MAKES ---
+content: quotes             # quotes (default) | horror
+format: slideshow           # slideshow = silent text slides + music | narrated = AI voice (horror profile only)
+
+profiles:
+  quotes:
+    bible: bible_quotes.md
+    series: standalone      # every episode is independent (no multi-part arcs)
+    image_provider: pexels  # real photos (needs free PEXELS_API_KEY)
+    look: romantic          # warm grade, soft glow, slow zoom
+    transition: crossfade
+    music_mood: warm
+    hud: brand              # small channel name at the top
+    channel_name: "MARIGOLD LETTERS"
+    words: [120, 160]       # total on-screen words
+    slide: {font: "DejaVu Serif", size: 74, outline: 3, accent: "F5B83D"}   # accent = marigold (RGB hex)
+    dim: 0.30
+    cta: "SEND THIS TO SOMEONE WHO NEEDS IT"
+    templates:              # rotated by episode number; letters are the brand, so they appear every other episode
+      - &letter
+        id: letter
+        how: "A short emotional letter in second person. Slide 1 opens with 'Dear ...' addressed to ONE very specific kind of person (for example 'Dear you, who still rehearses the conversation in the shower.'). Slide by slide it moves from pain or doubt to a quiet realization to gentle hope. Each slide is one beat of the letter. The last slide is a short, warm sign-off (like 'Yours, softly.'). It must feel like it was written for one specific person."
+      - id: signs
+        how: "A list post: 'N quiet signs / habits / truths about THEME'. Slide 1 is the hook with the number, then ONE sign per slide, each with a concrete everyday example (not abstract). The last slide is a warm payoff line."
+      - *letter
+      - id: truths
+        how: "Warm hard truths. Each slide is one short, original, memorable truth about THEME, building from relatable to profound. The last slide reframes everything gently."
+      - *letter
+      - id: story
+        how: "A micro-story in first person told across the slides, with an emotional turn around slide 7 and a calm ending. Specific places, objects and moments."
+    themes:
+      - what real, steady love looks like
+      - healing after heartbreak
+      - self-worth and self-love
+      - integrity and character when nobody is watching
+      - kindness and respect in relationships
+      - ambition and purpose (professional growth, said warmly)
+      - friendship and loyalty
+      - gratitude and slowing down
+    photo_moods: "soft flowers (roses, peonies, wildflowers), calm landscapes (misty mountains, lake at sunrise, golden fields, ocean), romantic scenes (couple holding hands, silhouettes at sunset, candlelight), cozy details (coffee by a window, open book, rain on glass)"
+
+  horror:
+    bible: bible_horror.md
+    series: arcs
+    image_provider: cloudflare
+    look: horror
+    transition: dip
+    music_mood: dark
+    hud: rec
+    channel_name: "THE HOLLOW HOURS"
+    words: [140, 175]
+    slide: {font: "DejaVu Sans", size: 78, outline: 6, accent: "E8B44F"}
+    dim: 0.40
+    cta: "FOLLOW FOR THE NEXT PART"
+
+publish:
+  enabled: true               # upload the finished video to your TikTok inbox (needs the TIKTOK_* secrets; see README)
+
+slideshow:
+  target_seconds: [62, 68]   # final video length is picked in this range (always > 1 minute)
+  reading_wps: 2.8           # reading speed used to time each slide
+  min_slide_seconds: 3.5
+  music_gain: 0.9
+
+# --- Story ---
+arc_parts: 3                 # each story arc = N episodes
+narration_words: [170, 210]  # ~75-95 seconds of speech
+
+# Random flavor for NEW arcs (keeps episodes from feeling templated)
+settings_pool:
+  - a 24-hour laundromat
+  - a rural night bus route
+  - an empty office building after midnight
+  - a hospital parking garage
+  - a motel at the edge of a highway
+  - a university library during exam week
+  - a lighthouse-turned-museum
+  - a night-shift grocery store
+  - a small-town radio station
+  - an apartment building with one extra floor
+devices_pool:
+  - a voicemail the narrator keeps receiving
+  - a logbook entry that changes overnight
+  - a coworker nobody else remembers
+  - a rule posted on a wall that keeps growing
+  - a photo that gets slightly different each day
+  - a neighbor who is always awake
+  - a sound that repeats at the same minute every night
+  - a door that was not there yesterday
+
+# --- Images for the horror profile (free: Cloudflare Workers AI, FLUX.1 schnell) ---
+image:
+  model: "@cf/black-forest-labs/flux-1-schnell"
+  steps: 4
+  style_prefix: >-
+    Dark cinematic horror illustration, moody low-key lighting, desaturated teal and sickly amber palette,
+    volumetric fog, heavy film grain, shallow depth of field, wide atmospheric composition,
+    no people facing the camera, no text, no watermark.
+
+# --- Video ---
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  tail_seconds: 1.0
+  crossfade_seconds: 0.4
+  hud_time: "03:07 AM"        # horror profile easter egg
+  ambient_volume: 0.55
+  music_volume: 0.12
+
+captions:                      # narrated-mode word captions
+  words_per_line: 3
+  font: "DejaVu Sans"
+  font_size: 96
+  whisper_model: base.en
