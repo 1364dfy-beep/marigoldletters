@@ -1,1 +1,15 @@
-{"episodes": [], "arc": null}
+{
+  "episodes": [
+    {
+      "num": 1,
+      "date": "2026-10-07",
+      "arc_title": "self-worth and self-love",
+      "part": 1,
+      "title": "Dear you who waits by the door",
+      "summary": "An emotional letter addressing the habit of shrinking to keep the peace, pivoting toward the realization that solitude is a safe space and self-acceptance requires no permission.",
+      "template": "letter",
+      "theme": "self-worth and self-love"
+    }
+  ],
+  "arc": null
+}
