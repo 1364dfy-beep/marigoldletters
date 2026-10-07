@@ -1,0 +1,5 @@
+google-genai>=1.0.0
+pyyaml>=6.0
+requests>=2.31
+numpy>=1.26
+pynacl>=1.5   # stores a rotated TikTok refresh token as a GitHub secret
