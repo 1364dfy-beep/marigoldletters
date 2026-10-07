@@ -3,6 +3,8 @@
 # Check https://ai.google.dev/gemini-api/docs/pricing for current free models
 # and put the newest Flash / Flash-TTS names at the top of each list.
 text_models:
+  - gemini-3.8-flash
+  - gemini-3.5-flash-lite
   - gemini-2.5-flash
   - gemini-2.5-flash-lite
 tts_models:
