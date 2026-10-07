@@ -1,11 +1,16 @@
 import json
 import time
+import threading
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 STATE_FILE = ROOT / "state" / "episodes.json"
+
+
+def log(msg: str) -> None:
+    print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
 
 def load_settings() -> dict:
@@ -32,22 +37,48 @@ def save_state(state: dict) -> None:
     STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def with_fallback(models, fn, retries: int = 3, label: str = "call"):
+def _run_with_timeout(fn, model, seconds):
+    """Run fn(model) in a thread; raise TimeoutError if it takes longer than `seconds`."""
+    box = {}
+
+    def target():
+        try:
+            box["result"] = fn(model)
+        except Exception as e:  # noqa: BLE001
+            box["error"] = e
+
+    t = threading.Thread(target=target, daemon=True)
+    t.start()
+    t.join(seconds)
+    if t.is_alive():
+        raise TimeoutError(f"TIMEOUT after {seconds}s (no response from {model})")
+    if "error" in box:
+        raise box["error"]
+    return box["result"]
+
+
+def with_fallback(models, fn, retries: int = 3, label: str = "call", timeout: int = 90):
     """Try fn(model) for each model in order, retrying transient errors.
 
     - 404 / NOT_FOUND  -> model name is wrong or retired: skip to next model.
     - 429 / 503        -> rate limit or overload: wait longer, retry.
-    - anything else    -> short wait, retry (TTS/LLM occasionally return junk).
+    - timeout          -> no response: retry, then next model.
+    - anything else    -> short wait, retry.
     """
     last = None
     for model in models:
         for attempt in range(retries):
+            started = time.time()
+            log(f"[{label}] START {model} attempt {attempt + 1}/{retries}")
             try:
-                return fn(model)
-            except Exception as e:  # noqa: BLE001 - we really want to catch everything here
+                result = _run_with_timeout(fn, model, timeout)
+                log(f"[{label}] OK {model} in {time.time() - started:.1f}s")
+                return result
+            except Exception as e:  # noqa: BLE001
                 last = e
                 msg = str(e)
-                print(f"[{label}] {model} attempt {attempt + 1}/{retries} failed: {msg[:240]}")
+                log(f"[{label}] FAIL {model} attempt {attempt + 1}/{retries} "
+                    f"after {time.time() - started:.1f}s: {msg[:240]}")
                 if "404" in msg or "NOT_FOUND" in msg:
                     break
                 transient = any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE"))
