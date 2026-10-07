@@ -52,5 +52,5 @@ def with_fallback(models, fn, retries: int = 3, label: str = "call"):
                     break
                 transient = any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE"))
                 if attempt < retries - 1:
-                    time.sleep((20 if transient else 3) * (attempt + 1))
+                    time.sleep((20 if transient else 5) * (attempt + 1))
     raise RuntimeError(f"[{label}] all models failed. Last error: {last}")
