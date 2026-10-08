@@ -81,6 +81,8 @@ FALLBACK_QUERIES = [
     "peony flowers", "golden wheat field", "sunlight through leaves", "folded blanket cozy",
 ]
 SIMILAR_BITS = 10  # two photos whose 8x8 hashes differ in <= this many of 64 bits count as "the same picture"
+MIN_LUMA = 100     # average brightness (0-255) below this = too dark/gloomy for a warm channel -> rejected
+MAX_BLUE_RATIO = 1.25  # average blue / red above this = cold blue-grey photo -> rejected
 
 
 def _pexels_search(query: str, key: str, page: int = 1) -> list[dict]:
@@ -117,20 +119,26 @@ def _photo_urls(photo: dict) -> list[str]:
     return urls
 
 
-def _fingerprint(path: str) -> int | None:
-    """64-bit difference hash of the picture (9x8 grayscale decoded by ffmpeg). None if it cannot be computed.
-    Catches the same photo (or a near-identical shot of the same scene) even when Pexels gives it another id."""
+def _analyze(path: str) -> tuple[int, float, float] | None:
+    """(64-bit difference hash, average brightness 0-255, blue/red ratio) from a tiny 9x8 RGB decode by ffmpeg.
+    The hash catches the same photo (or a near-identical shot) even when Pexels gives it another id.
+    Returns None if the image cannot be analysed (then no filter is applied)."""
     try:
         raw = subprocess.run(
-            ["ffmpeg", "-v", "error", "-i", path, "-vf", "scale=9:8:flags=area,format=gray", "-frames:v", "1",
+            ["ffmpeg", "-v", "error", "-i", path, "-vf", "scale=9:8:flags=area,format=rgb24", "-frames:v", "1",
              "-f", "rawvideo", "-"], check=True, capture_output=True).stdout
-        if len(raw) < 72:
+        if len(raw) < 216:
             return None
+        px = [(raw[i], raw[i + 1], raw[i + 2]) for i in range(0, 216, 3)]
+        gray = [0.299 * r + 0.587 * g + 0.114 * b for r, g, b in px]
         bits = 0
         for row in range(8):
             for col in range(8):
-                bits = (bits << 1) | (1 if raw[row * 9 + col] > raw[row * 9 + col + 1] else 0)
-        return bits
+                bits = (bits << 1) | (1 if gray[row * 9 + col] > gray[row * 9 + col + 1] else 0)
+        luma = sum(gray) / len(gray)
+        red = sum(p[0] for p in px) / len(px)
+        blue = sum(p[2] for p in px) / len(px)
+        return bits, luma, blue / max(red, 1.0)
     except Exception:  # noqa: BLE001
         return None
 
@@ -149,8 +157,9 @@ def _queries_for(q: str, i: int) -> list[str]:
 
 def pexels_photos(scenes: list[dict], workdir: Path) -> tuple[list[str | None], list[str]]:
     """One photo per slide, never repeating inside the video: unique photo id, preferably a different
-    photographer, and not visually near-identical to an earlier slide. If nothing new can be found, the
-    slide gets the soft gradient background instead of a repeat."""
+    photographer, and not visually near-identical to an earlier slide. Photos that are too dark or cold blue
+    are skipped (this channel is warm and golden). If nothing suitable can be found, the slide gets the soft
+    gradient background instead of a repeat."""
     key = os.environ.get("PEXELS_API_KEY")
     if not key:
         print("[visuals] PEXELS_API_KEY not set -> soft gradient backgrounds only")
@@ -176,14 +185,21 @@ def pexels_photos(scenes: list[dict], workdir: Path) -> tuple[list[str | None], 
             pool.sort(key=lambda p: p.get("photographer") in used_people)  # new photographers first (stable sort)
             tries = 0
             for photo in pool:
-                if tries >= 10:
+                if tries >= 14:
                     break
                 dest = workdir / f"photo_{i}.jpg"
                 if not any(_download(u, dest) for u in _photo_urls(photo)):
                     continue
                 tries += 1
                 used_ids.add(photo["id"])
-                fp = _fingerprint(str(dest))
+                info = _analyze(str(dest))
+                fp = info[0] if info else None
+                if info and info[1] < MIN_LUMA:
+                    print(f"[visuals] slide {i + 1}: skipped a too-dark photo of '{query}' (brightness {info[1]:.0f})")
+                    continue
+                if info and info[2] > MAX_BLUE_RATIO:
+                    print(f"[visuals] slide {i + 1}: skipped a cold blue photo of '{query}' (blue/red {info[2]:.2f})")
+                    continue
                 if _too_similar(fp, seen_fps):
                     print(f"[visuals] slide {i + 1}: skipped a near-duplicate photo of '{query}'")
                     continue
