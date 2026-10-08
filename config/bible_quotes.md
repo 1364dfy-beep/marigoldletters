@@ -21,3 +21,22 @@ People save them, send them to someone, and comment because a line felt like it 
 - No attributions ("- Maya Angelou"), no real names, no brands.
 - No medical/psychological claims, no advice to cut off people, no revenge, no self-harm themes.
 - No sexual content.
+
+**Photo rules (the search phrase for each slide)**
+- Warm, soft, golden light: sunrise, golden hour, candle glow, window light.
+- Nature, objects and places only: flowers, fields, lakes, coffee cups, books, blankets, rain on a window.
+- Prefer NO people. Avoid asking for woman, man, girl, couple, portrait or face: a stranger's photo next to a sensitive text can imply something about that person.
+- Avoid dark, gloomy or urban scenes: no "shadow", "hallway", "night street", "city", "sign". Even for painful slides use soft muted images (rain on a window, foggy field), not dark ones.
+- The mood warms up slide by slide: early slides muted and calm, final slides golden and bright.
+
+**Caption and hashtag rules (TikTok search + discovery)**
+- Caption: 1-2 short sentences. The FIRST sentence contains natural search keywords a real person would type
+  (for example "letter to someone who overthinks", "self-worth reminder", "healing after heartbreak",
+  "gentle reminder for hard days"). End with a question or a "send this to someone who..." line.
+  Do not copy sentences from the slides word for word.
+- Hashtags: EXACTLY 5, lowercase, written without the # sign:
+  1) marigoldletters (always: our brand tag)
+  2) one broad topic tag (for example selflove, healing, relationships, mindset)
+  3) two niche tags that match THIS episode's theme (for example lettertoyou, emotionalhealing, innerchild, gentlereminders)
+  4) one content-type tag (for example lettersforyou, softwords, poetrytok)
+- Do NOT use fyp, foryou, viral, trending or anything unrelated to the episode.
