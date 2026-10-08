@@ -19,6 +19,16 @@
       "summary": "Explores four everyday signs of genuine respect and safety in a relationship, anchored by the quotable line that real respect is the quiet safety of being fully yourself.",
       "template": "signs",
       "theme": "kindness and respect in relationships"
+    },
+    {
+      "num": 3,
+      "date": "2026-10-08",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Quiet Integrity",
+      "summary": "An emotional letter celebrating personal integrity and doing the right thing when unobserved. Hook: Dear you, who fixes the crooked painting in an empty hallway just so it looks right.",
+      "template": "letter",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null
