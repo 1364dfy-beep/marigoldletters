@@ -114,13 +114,32 @@ def split_sentences(text: str) -> list[str]:
     return [p for p in parts if p]
 
 
+def _block_height(sents: list[str], size: int, width: int) -> int:
+    """Rough height (px) of the wrapped text block, used to size the soft scrim behind it."""
+    chars_per_line = max(8, int((width - 240) / (size * 0.62) * 0.9))
+    lines = sum(max(1, -(-len(s) // chars_per_line)) for s in sents) + max(0, len(sents) - 1)  # blank line between sentences
+    return int(lines * size * 1.22)
+
+
+def _scrim(t0: float, t1: float, center_y: int, block_h: int, width: int, pad: int = 170) -> str:
+    """A soft, blurred, semi-transparent dark band behind the text so it stays readable on bright photos."""
+    h = block_h + 2 * pad
+    top = int(center_y - h / 2)
+    shape = f"m 0 0 l {width} 0 {width} {h} 0 {h}"
+    return (f"Dialogue: 0,{_ts(t0)},{_ts(t1)},Slide,,0,0,0,,"
+            f"{{\\an7\\pos(0,{top})\\p1\\1c&H000000&\\1a&HB0&\\bord0\\shad0\\blur70\\fad(350,350)}}{shape}")
+
+
 def write_slides_ass(slides: list[dict], durs: list[float], reveals: list[list[float]], path: str,
                      width: int, height: int, cfg: dict, hud: dict | None, total: float,
                      cta: str | None = None, slide: dict | None = None) -> None:
     """One event per slide. Layout is fixed from the first frame; each sentence fades in at its own
-    time (via \\t alpha transforms), so nothing jumps around, and everything fades out at the end."""
+    time (via \\t alpha transforms), so nothing jumps around, and everything fades out at the end.
+    A soft dark scrim (layer 0) sits behind the text (layer 1) for readability."""
     lines, t0 = [], 0.0
     accent = _bgr((slide or {}).get("accent", "E8B44F"))
+    size = int((slide or {}).get("size", 78))
+    cy = int(height * 0.47)
     for i, (sl, dur, offs) in enumerate(zip(slides, durs, reveals)):
         sents = split_sentences(sl["text"])
         parts = []
@@ -133,14 +152,17 @@ def write_slides_ass(slides: list[dict], durs: list[float], reveals: list[list[f
                 f"{_clean(sent)}"
             )
         text = "\\N\\N".join(parts)
+        lines.append(_scrim(t0, t0 + dur, cy, _block_height(sents, size, width), width))
         lines.append(
-            f"Dialogue: 0,{_ts(t0)},{_ts(t0 + dur)},Slide,,0,0,0,,{{\\an5\\pos({width // 2},{int(height * 0.47)})}}{text}"
+            f"Dialogue: 1,{_ts(t0)},{_ts(t0 + dur)},Slide,,0,0,0,,{{\\an5\\pos({width // 2},{cy})}}{text}"
         )
         if cta and i == len(slides) - 1:
             s = t0 + dur * 0.45
+            cta_y = int(height * 0.72)
+            lines.append(_scrim(s, t0 + dur, cta_y, 90, width, pad=110))
             lines.append(
-                f"Dialogue: 0,{_ts(s)},{_ts(t0 + dur)},Cta,,0,0,0,,"
-                f"{{\\an5\\pos({width // 2},{int(height * 0.72)})\\fad(350,350)}}{_clean(cta)}"
+                f"Dialogue: 1,{_ts(s)},{_ts(t0 + dur)},Cta,,0,0,0,,"
+                f"{{\\an5\\pos({width // 2},{cta_y})\\fad(350,350)}}{_clean(cta)}"
             )
         t0 += dur
     if hud and total > 0:
