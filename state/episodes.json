@@ -49,7 +49,32 @@
       "summary": "An emotional letter addressing the quiet, loyal friend who notices everything and worries their care goes unseen. The hook centers on keeping old birthday cards, leading to the core truth that true friendship stays when the room goes dark.",
       "template": "letter",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 6,
+      "date": "2026-10-08",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "What Steady Love Looks Like",
+      "summary": "An emotional first-person micro-story contrasting the exhausting performance of conditional affection with the quiet safety of steady love. Hook: For a long time, I thought love was a grand performance.",
+      "template": "story",
+      "theme": "what real, steady love looks like"
     }
   ],
-  "arc": null
+  "arc": null,
+  "photo_history": [
+    [
+      "dandelion seeds soft light",
+      "quiet misty lake",
+      "light mist forest sunbeams",
+      "calm shoreline morning",
+      "butterfly on flower",
+      "palm leaves sunlight",
+      "rose garden morning",
+      "coastal cliffs sunlight",
+      "golden autumn trees",
+      "golden reeds lake",
+      "orange flowers sunlight"
+    ]
+  ]
 }
