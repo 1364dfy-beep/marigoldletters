@@ -9,6 +9,16 @@
       "summary": "An emotional letter addressing the habit of shrinking to keep the peace, pivoting toward the realization that solitude is a safe space and self-acceptance requires no permission.",
       "template": "letter",
       "theme": "self-worth and self-love"
+    },
+    {
+      "num": 2,
+      "date": "2026-10-08",
+      "arc_title": "kindness and respect in relationships",
+      "part": 1,
+      "title": "Quiet signs of deep respect",
+      "summary": "Explores four everyday signs of genuine respect and safety in a relationship, anchored by the quotable line that real respect is the quiet safety of being fully yourself.",
+      "template": "signs",
+      "theme": "kindness and respect in relationships"
     }
   ],
   "arc": null
