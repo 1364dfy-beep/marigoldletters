@@ -114,20 +114,49 @@ def split_sentences(text: str) -> list[str]:
     return [p for p in parts if p]
 
 
+def _text_width(word: str, size: int) -> float:
+    """Approximate rendered width (px) of a word in a bold serif font (calibrated on DejaVu Serif Bold)."""
+    w = 0.0
+    for ch in word:
+        if ch == " ":
+            w += 0.32
+        elif ch in "iljtfI.,;:'!|":
+            w += 0.34
+        elif ch.isupper() or ch in "mwMW":
+            w += 0.74
+        else:
+            w += 0.56
+    return w * size
+
+
+def _wrap_lines(sentence: str, size: int, max_w: float) -> int:
+    lines, cur = 1, 0.0
+    for word in sentence.split():
+        ww = _text_width(word, size)
+        sp = _text_width(" ", size)
+        if cur and cur + sp + ww > max_w:
+            lines, cur = lines + 1, ww
+        else:
+            cur = cur + sp + ww if cur else ww
+    return lines
+
+
 def _block_height(sents: list[str], size: int, width: int) -> int:
-    """Rough height (px) of the wrapped text block, used to size the soft scrim behind it."""
-    chars_per_line = max(8, int((width - 240) / (size * 0.62) * 0.9))
-    lines = sum(max(1, -(-len(s) // chars_per_line)) for s in sents) + max(0, len(sents) - 1)  # blank line between sentences
-    return int(lines * size * 1.22)
+    """Height (px) of the wrapped text block, used to place it and to size the soft band behind it."""
+    max_w = width - 240  # MarginL/R = 120 in the Slide style
+    lines = sum(_wrap_lines(s, size, max_w) for s in sents)
+    return int(lines * size * 1.0 + max(0, len(sents) - 1) * size * 0.5 + size * 0.1)
 
 
-def _scrim(t0: float, t1: float, center_y: int, block_h: int, width: int, pad: int = 170) -> str:
+def _scrim(t0: float, t1: float, center_y: int, block_h: int, width: int, pad: int = 150,
+           opacity: float = 0.55, blur: int = 60) -> str:
     """A soft, blurred, semi-transparent dark band behind the text so it stays readable on bright photos."""
     h = block_h + 2 * pad
     top = int(center_y - h / 2)
+    alpha = max(0, min(255, int((1.0 - opacity) * 255)))
     shape = f"m 0 0 l {width} 0 {width} {h} 0 {h}"
     return (f"Dialogue: 0,{_ts(t0)},{_ts(t1)},Slide,,0,0,0,,"
-            f"{{\\an7\\pos(0,{top})\\p1\\1c&H000000&\\1a&HB0&\\bord0\\shad0\\blur70\\fad(350,350)}}{shape}")
+            f"{{\\an7\\pos(0,{top})\\p1\\1c&H000000&\\1a&H{alpha:02X}&\\bord0\\shad0\\blur{blur}\\fad(350,350)}}{shape}")
 
 
 def write_slides_ass(slides: list[dict], durs: list[float], reveals: list[list[float]], path: str,
@@ -139,7 +168,9 @@ def write_slides_ass(slides: list[dict], durs: list[float], reveals: list[list[f
     lines, t0 = [], 0.0
     accent = _bgr((slide or {}).get("accent", "E8B44F"))
     size = int((slide or {}).get("size", 78))
-    cy = int(height * 0.47)
+    opacity = float((slide or {}).get("scrim", 0.55))   # darkness of the soft band behind the text (0-1)
+    text_y = float((slide or {}).get("text_y", 0.64))   # centre of the text block (fraction of video height)
+    bottom_limit = int(height * 0.80)                    # keep text clear of TikTok's caption/buttons area
     for i, (sl, dur, offs) in enumerate(zip(slides, durs, reveals)):
         sents = split_sentences(sl["text"])
         parts = []
@@ -152,14 +183,17 @@ def write_slides_ass(slides: list[dict], durs: list[float], reveals: list[list[f
                 f"{_clean(sent)}"
             )
         text = "\\N\\N".join(parts)
-        lines.append(_scrim(t0, t0 + dur, cy, _block_height(sents, size, width), width))
+        bh = _block_height(sents, size, width)
+        cy = min(int(height * text_y), bottom_limit - bh // 2)
+        has_cta = bool(cta) and i == len(slides) - 1
+        extra = 200 if has_cta else 0   # last slide: one band that also covers the call-to-action line
+        lines.append(_scrim(t0, t0 + dur, cy + extra // 2, bh + extra, width, opacity=opacity))
         lines.append(
             f"Dialogue: 1,{_ts(t0)},{_ts(t0 + dur)},Slide,,0,0,0,,{{\\an5\\pos({width // 2},{cy})}}{text}"
         )
-        if cta and i == len(slides) - 1:
+        if has_cta:
             s = t0 + dur * 0.45
-            cta_y = int(height * 0.72)
-            lines.append(_scrim(s, t0 + dur, cta_y, 90, width, pad=110))
+            cta_y = min(cy + bh // 2 + 130, int(height * 0.86))
             lines.append(
                 f"Dialogue: 1,{_ts(s)},{_ts(t0 + dur)},Cta,,0,0,0,,"
                 f"{{\\an5\\pos({width // 2},{cta_y})\\fad(350,350)}}{_clean(cta)}"
