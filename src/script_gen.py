@@ -187,6 +187,27 @@ def _parse(text: str | None, lo: int, hi: int, standalone: bool = False) -> dict
     return data
 
 
+def _plan_photos(prof: dict, state: dict, n: int) -> list[str] | None:
+    """Pick one search phrase per slide from prof['photo_pool'] (muted -> calm -> golden, so the video warms up).
+    Phrases used in the last 3 episodes are avoided, and no phrase repeats inside a video. This replaces the
+    model's own image phrases, which kept converging on the same few subjects (coffee cup, rainy window...)."""
+    pool = prof.get("photo_pool")
+    if not pool or n < 1:
+        return None
+    recent = {q for h in state.get("photo_history", [])[-3:] for q in h}
+    chosen: list[str] = []
+    for i in range(n):
+        pos = i / max(n - 1, 1)
+        cat = "muted" if pos < 0.34 else ("calm" if pos < 0.72 else "golden")
+        options = list(pool.get(cat) or [])
+        fresh = [q for q in options if q not in recent and q not in chosen]
+        options = fresh or [q for q in options if q not in chosen] or options
+        if not options:
+            return None
+        chosen.append(random.choice(options))
+    return chosen
+
+
 def generate_episode(bible, settings, state, ep_num, arc, part, parts) -> dict:
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     prof = settings["profiles"][settings["content"]]
@@ -220,4 +241,11 @@ def generate_episode(bible, settings, state, ep_num, arc, part, parts) -> dict:
 
     data = with_fallback(settings["text_models"], run, label="script")
     data.update(extra)
+    if standalone:
+        plan = _plan_photos(prof, state, len(data["scenes"]))
+        if plan:
+            for sc, q in zip(data["scenes"], plan):
+                sc["image_prompt"] = q
+            state["photo_history"] = (state.get("photo_history", []) + [plan])[-10:]  # saved with the state
+            print("[script] photo plan:", " | ".join(plan), flush=True)
     return data
