@@ -31,8 +31,8 @@ profiles:
     hud: brand              # small channel name at the top
     channel_name: "MARIGOLD LETTERS"
     words: [120, 160]       # total on-screen words
-    slide: {font: "DejaVu Serif", size: 84, outline: 4, accent: "F5B83D", scrim: 0.55, text_y: 0.64}   # accent = marigold; scrim = darkness of the blurred band behind text (0-1); text_y = text position (0 top ... 1 bottom)
-    dim: 0.25
+    slide: {font: "DejaVu Serif", size: 84, outline: 4, accent: "F5B83D", scrim: 0.45, text_y: 0.64}   # accent = marigold; scrim = darkness of the blurred band behind text (0-1); text_y = text position (0 top ... 1 bottom)
+    dim: 0.12
     cta: "SEND THIS TO SOMEONE WHO NEEDS IT"
     templates:              # rotated by episode number; letters are the brand, so they appear every other episode
       - &letter
@@ -55,7 +55,96 @@ profiles:
       - ambition and purpose (professional growth, said warmly)
       - friendship and loyalty
       - gratitude and slowing down
-    photo_moods: "soft flowers (roses, peonies, wildflowers, marigolds), calm landscapes in warm light (sunrise lake, golden fields, misty hills at dawn, ocean at sunset), cozy details (steaming coffee by a window, open book, folded blankets, candlelight, rain on glass)"
+    photo_moods: "soft flowers (roses, peonies, wildflowers, marigolds), calm landscapes in warm light (sunrise lake, golden fields, misty hills at dawn, ocean at sunset), sunlit details (sunlit leaves, a coffee cup in morning sun, a folded blanket in window light)"
+    photo_pool:             # the code picks one phrase per slide (muted -> calm -> golden); avoids the last 3 episodes
+      muted:
+        - morning mist over field
+        - pale sky at dawn
+        - soft fog over hills
+        - dew on grass
+        - pale pink clouds
+        - quiet misty lake
+        - white wildflowers soft light
+        - lavender field haze
+        - sheer curtains window light
+        - pastel sunrise sky
+        - frosted leaves sunrise
+        - dandelion seeds soft light
+        - gentle morning haze valley
+        - still pond reflection
+        - dried grass soft light
+        - pale peonies
+        - white daisies meadow
+        - quiet beach at dawn
+        - soft sand dunes light
+        - calm shoreline morning
+        - bare branches soft sunrise
+        - layered clouds soft light
+        - cotton grass field
+        - white hydrangea flowers
+        - light mist forest sunbeams
+        - soft pink magnolia
+        - seashells on sand morning
+        - white feather soft light
+        - wheat stalks soft focus
+      calm:
+        - green meadow sunlight
+        - sunlit forest path
+        - sunlit leaves
+        - wildflower meadow
+        - calm lake morning
+        - tulip field
+        - cherry blossom branch
+        - sunflower field
+        - rolling green hills
+        - lush green valley
+        - pink peony close up
+        - rose garden morning
+        - butterfly on flower
+        - mountain lake sunrise
+        - coastal cliffs sunlight
+        - palm leaves sunlight
+        - autumn leaves sunlight
+        - olive grove sunlight
+        - pink magnolia tree
+        - daffodils field
+        - fern forest sunlight
+        - ocean waves sunlit
+        - steaming tea cup morning sun
+        - folded blanket window light
+        - vineyard rows sunlight
+        - bird on branch sunrise
+        - poppy field
+        - stone path garden sunlight
+      golden:
+        - golden wheat field
+        - sunset over ocean
+        - golden hour meadow
+        - marigold flowers
+        - sunrise over mountains
+        - golden sunlight forest
+        - sunflower close up
+        - orange sky sunset clouds
+        - lavender field sunset
+        - warm sunbeams through trees
+        - golden autumn trees
+        - sunlit dandelion
+        - glowing sunset beach
+        - golden reeds lake
+        - sunrise lake reflection
+        - yellow wildflowers
+        - honey colored light field
+        - rainbow over green field
+        - lemon tree sunlight
+        - orange flowers sunlight
+        - hay bales golden hour
+        - golden hills sunset
+        - tulips golden light
+        - sunset behind palm leaves
+        - golden clouds sunrise
+        - sparkling sunlit water
+        - amber leaves backlit
+        - cosmos flowers sunset
 
   horror:
     bible: bible_horror.md
