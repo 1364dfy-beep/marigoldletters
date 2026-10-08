@@ -5,11 +5,12 @@ cloudflare  AI illustrations via Cloudflare Workers AI (FLUX.1 schnell, free dai
             Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN.
 
 If a key is missing or a request fails, that slide reuses an earlier image (or a generated
-background) so the pipeline never fails.
+background) so the pipeline never fails. (Pexels photos are never reused: no new photo -> gradient.)
 """
 import base64
 import os
 import random
+import subprocess
 import time
 from pathlib import Path
 
@@ -73,14 +74,20 @@ def generate_scene_images(scenes: list[dict], cfg: dict, workdir: Path) -> list[
 
 # ======================================================================= Pexels (real photos)
 PEXELS_SEARCH = "https://api.pexels.com/v1/search"
-FALLBACK_QUERIES = ["soft pink flowers", "calm lake sunrise", "golden hour field", "misty mountains"]
+# generic warm, people-free fallbacks, tried (in rotation) when a slide's own search phrase finds nothing new
+FALLBACK_QUERIES = [
+    "soft pink flowers", "calm lake sunrise", "golden hour field", "misty hills dawn", "marigold flowers",
+    "coffee cup window light", "open book candle", "rain on window", "wildflower meadow", "ocean sunset",
+    "peony flowers", "golden wheat field", "sunlight through leaves", "folded blanket cozy",
+]
+SIMILAR_BITS = 10  # two photos whose 8x8 hashes differ in <= this many of 64 bits count as "the same picture"
 
 
-def _pexels_search(query: str, key: str) -> list[dict]:
+def _pexels_search(query: str, key: str, page: int = 1) -> list[dict]:
     r = requests.get(
         PEXELS_SEARCH,
         headers={"Authorization": key},
-        params={"query": query, "orientation": "portrait", "size": "large", "per_page": 15},
+        params={"query": query, "orientation": "portrait", "size": "large", "per_page": 30, "page": page},
         timeout=30,
     )
     r.raise_for_status()
@@ -110,38 +117,85 @@ def _photo_urls(photo: dict) -> list[str]:
     return urls
 
 
+def _fingerprint(path: str) -> int | None:
+    """64-bit difference hash of the picture (9x8 grayscale decoded by ffmpeg). None if it cannot be computed.
+    Catches the same photo (or a near-identical shot of the same scene) even when Pexels gives it another id."""
+    try:
+        raw = subprocess.run(
+            ["ffmpeg", "-v", "error", "-i", path, "-vf", "scale=9:8:flags=area,format=gray", "-frames:v", "1",
+             "-f", "rawvideo", "-"], check=True, capture_output=True).stdout
+        if len(raw) < 72:
+            return None
+        bits = 0
+        for row in range(8):
+            for col in range(8):
+                bits = (bits << 1) | (1 if raw[row * 9 + col] > raw[row * 9 + col + 1] else 0)
+        return bits
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _too_similar(fp: int | None, seen: list[int]) -> bool:
+    return fp is not None and any(bin(fp ^ o).count("1") <= SIMILAR_BITS for o in seen)
+
+
+def _queries_for(q: str, i: int) -> list[str]:
+    """The slide's phrase, its first two words, then rotating generic fallbacks (never the same list twice)."""
+    out = [q, " ".join(q.split()[:2])]
+    n = len(FALLBACK_QUERIES)
+    out += [FALLBACK_QUERIES[(i * 3 + k) % n] for k in range(6)]
+    return [x for x in dict.fromkeys(a for a in out if a)]
+
+
 def pexels_photos(scenes: list[dict], workdir: Path) -> tuple[list[str | None], list[str]]:
+    """One photo per slide, never repeating inside the video: unique photo id, preferably a different
+    photographer, and not visually near-identical to an earlier slide. If nothing new can be found, the
+    slide gets the soft gradient background instead of a repeat."""
     key = os.environ.get("PEXELS_API_KEY")
     if not key:
         print("[visuals] PEXELS_API_KEY not set -> soft gradient backgrounds only")
         return [None] * len(scenes), []
-    used: set[int] = set()
+    used_ids: set[int] = set()
+    used_people: set[str] = set()
+    seen_fps: list[int] = []
     out: list[str | None] = []
     credits: list[str] = []
     for i, sc in enumerate(scenes):
         path = None
         q = sc["image_prompt"]
-        # try the requested phrase, then its first two words, then generic romantic fallbacks
-        attempts = [q, " ".join(q.split()[:2]), FALLBACK_QUERIES[i % len(FALLBACK_QUERIES)]]
-        for query in dict.fromkeys(a for a in attempts if a):
-            try:
-                photos = [p for p in _pexels_search(query, key) if p["id"] not in used]
-            except Exception as e:  # noqa: BLE001
-                print(f"[visuals] search '{query}' failed: {str(e)[:150]}")
-                continue
-            random.shuffle(photos)
-            for photo in photos[:8]:
-                dest = workdir / f"photo_{i}.jpg"
-                if any(_download(u, dest) for u in _photo_urls(photo)):
-                    used.add(photo["id"])
-                    path = str(dest)
-                    credits.append(photo.get("photographer", "Unknown"))
+        for query in _queries_for(q, i):
+            pool: list[dict] = []
+            for page in (1, 2):
+                try:
+                    pool += _pexels_search(query, key, page)
+                except Exception as e:  # noqa: BLE001
+                    print(f"[visuals] search '{query}' failed: {str(e)[:150]}")
                     break
+            pool = [p for p in pool if p["id"] not in used_ids]
+            random.shuffle(pool)
+            pool.sort(key=lambda p: p.get("photographer") in used_people)  # new photographers first (stable sort)
+            tries = 0
+            for photo in pool:
+                if tries >= 10:
+                    break
+                dest = workdir / f"photo_{i}.jpg"
+                if not any(_download(u, dest) for u in _photo_urls(photo)):
+                    continue
+                tries += 1
+                used_ids.add(photo["id"])
+                fp = _fingerprint(str(dest))
+                if _too_similar(fp, seen_fps):
+                    print(f"[visuals] slide {i + 1}: skipped a near-duplicate photo of '{query}'")
+                    continue
+                if fp is not None:
+                    seen_fps.append(fp)
+                used_people.add(photo.get("photographer", ""))
+                credits.append(photo.get("photographer", "Unknown"))
+                path = str(dest)
+                break
             if path:
                 break
-        if path is None:  # reuse the previous good photo (the zoom direction will differ)
-            path = next((p for p in reversed(out) if p), None)
-        print(f"[visuals] slide {i + 1}/{len(scenes)}: '{q}' -> {'ok' if path else 'gradient fallback'}")
+        print(f"[visuals] slide {i + 1}/{len(scenes)}: '{q}' -> {'ok' if path else 'no new photo, gradient background'}")
         out.append(path)
         time.sleep(0.3)  # be polite to the API
     return out, sorted(set(credits))
