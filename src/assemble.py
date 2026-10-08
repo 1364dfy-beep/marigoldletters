@@ -47,8 +47,30 @@ def _image_segment(img: str, dur: float, out: Path, v: dict, idx: int, workdir: 
           "-t", d, "-vf", vf, *ENC, str(out)])
 
 
+def _mean_luma(path: str) -> float:
+    """Average brightness (0-255) of an image, from a tiny 48x84 grayscale decode. 100 if anything fails."""
+    try:
+        raw = subprocess.run(
+            ["ffmpeg", "-v", "error", "-i", path, "-vf", "scale=48:84,format=gray", "-frames:v", "1",
+             "-f", "rawvideo", "-"], check=True, capture_output=True).stdout
+        return sum(raw) / len(raw) if raw else 100.0
+    except Exception:  # noqa: BLE001
+        return 100.0
+
+
+def adaptive_tone(luma: float, max_dim: float) -> tuple[float, float]:
+    """(dim, lift) for a photo of average brightness `luma`.
+    Bright photos get up to `max_dim` darkening so text stays readable; dark photos are lifted a little
+    instead of being darkened further, so the video feels warm instead of gloomy."""
+    dim = max(0.0, min(1.0, (luma - 70.0) / 70.0)) * max_dim
+    lift = 1.0 if luma >= 75 else min(1.35, 75.0 / max(luma, 40.0))
+    return round(dim, 3), round(lift, 3)
+
+
 def _romantic_segment(img: str, dur: float, out: Path, v: dict, idx: int, workdir: Path, dim: float) -> None:
-    """Photo -> slow Ken Burns zoom (in on even slides, out on odd), warm grade, soft glow, light grain."""
+    """Photo -> slow Ken Burns zoom (in on even slides, out on odd), warm grade, soft glow, light grain.
+    `dim` is the MAXIMUM darkening; the real amount depends on how bright the photo is."""
+    dim, lift = adaptive_tone(_mean_luma(img), dim)
     w, h, fps = v["width"], v["height"], v["fps"]
     d = f"{dur:.3f}"
     zmax = 0.15
@@ -65,6 +87,7 @@ def _romantic_segment(img: str, dur: float, out: Path, v: dict, idx: int, workdi
         "[a][c]blend=all_mode=screen:all_opacity=0.22,"
         "noise=alls=6:allf=t,vignette=PI/5,"
         + (f"lutyuv=y='val*{1 - dim:.2f}'," if dim > 0 else "")
+        + (f"lutyuv=y='min(255,val*{lift:.2f})'," if lift > 1.0 else "")
         + "format=yuv420p"
     )
     _run(["ffmpeg", "-y", "-loop", "1", "-framerate", str(fps), "-i", str(pre),
@@ -143,28 +166,58 @@ def pick_music(music_dir: Path) -> str | None:
     return str(random.choice(tracks)) if tracks else None
 
 
+def _music_mode() -> str:
+    """slideshow.music_mode in config/settings.yaml: both (default) | none | generated."""
+    try:
+        from .util import load_settings
+        return str(load_settings().get("slideshow", {}).get("music_mode", "both"))
+    except Exception:  # noqa: BLE001
+        return "both"
+
+
+def _render_video(bg: Path, ass_name: str, workdir: Path, out: Path, total: float) -> None:
+    """Captions burned in, with a SILENT audio track (so every player treats the file normally)."""
+    _run(["ffmpeg", "-y", "-i", str(bg.resolve()), "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+          "-filter_complex", f"[0:v]ass={ass_name}[v]", "-map", "[v]", "-map", "1:a", "-t", f"{total:.3f}",
+          "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+          "-c:a", "aac", "-b:a", "48k", "-movflags", "+faststart", str(out.resolve())], cwd=workdir)
+
+
+def _add_music(video: Path, music: str, volume: float, total: float, out: Path) -> None:
+    """Replace the silent track with music. The video stream is copied (fast, no re-encode)."""
+    _run(["ffmpeg", "-y", "-i", str(video.resolve()), "-stream_loop", "-1", "-i", str(Path(music).resolve()),
+          "-filter_complex", f"[1:a]volume={volume}[a]", "-map", "0:v", "-map", "[a]", "-t", f"{total:.3f}",
+          "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out.resolve())])
+
+
 def final_mix(bg: Path, narration: str | None, ass_name: str, workdir: Path, out: Path,
               music: str | None, music_volume: float, total: float) -> None:
-    """narration is optional (slideshow mode = music only).
-    ass_name must be a file inside workdir (avoids ffmpeg path-escaping headaches)."""
-    cmd = ["ffmpeg", "-y", "-i", str(bg.resolve())]
-    idx, nar, mus = 1, None, None
-    if narration:
-        cmd += ["-i", str(Path(narration).resolve())]
-        nar, idx = idx, idx + 1
+    """Slideshow (no narration), by `slideshow.music_mode`:
+         both       out = SILENT video (for adding a trending sound inside TikTok) + <name>_music.mp4 backup
+         none       out = silent video only
+         generated  out = video with our generated music
+       Narrated mode (narration given) always mixes voice + music into `out`.
+       ass_name must be a file inside workdir (avoids ffmpeg path-escaping headaches)."""
+    if narration is None:
+        mode = _music_mode()
+        if mode == "generated":
+            if not music:
+                raise ValueError("music_mode 'generated' needs a music track")
+            _render_video(bg, ass_name, workdir, workdir / "silent.mp4", total)
+            _add_music(workdir / "silent.mp4", music, music_volume, total, out)
+        else:
+            _render_video(bg, ass_name, workdir, out, total)
+            if mode == "both" and music:
+                _add_music(out, music, music_volume, total, out.with_name(out.stem + "_music.mp4"))
+        return
+    cmd = ["ffmpeg", "-y", "-i", str(bg.resolve()), "-i", str(Path(narration).resolve())]
+    mus = None
     if music:
         cmd += ["-stream_loop", "-1", "-i", str(Path(music).resolve())]
-        mus = idx
-    fc = f"[0:v]ass={ass_name}[v];"
-    if nar and mus:
-        fc += (f"[{mus}:a]volume={music_volume}[m];"
-               f"[{nar}:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]")
-    elif nar:
-        fc += f"[{nar}:a]anull[a]"
-    elif mus:
-        fc += f"[{mus}:a]volume={music_volume}[a]"
-    else:
-        raise ValueError("final_mix needs narration and/or music")
+        mus = 2
+    fc = "[0:v]ass=" + ass_name + "[v];"
+    fc += (f"[{mus}:a]volume={music_volume}[m];[1:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[a]"
+           if mus else "[1:a]anull[a]")
     cmd += ["-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-t", f"{total:.3f}",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out.resolve())]
