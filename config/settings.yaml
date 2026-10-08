@@ -31,7 +31,7 @@ profiles:
     hud: brand              # small channel name at the top
     channel_name: "MARIGOLD LETTERS"
     words: [120, 160]       # total on-screen words
-    slide: {font: "DejaVu Serif", size: 84, outline: 4, accent: "F5B83D"}   # accent = marigold (RGB hex)
+    slide: {font: "DejaVu Serif", size: 84, outline: 4, accent: "F5B83D", scrim: 0.55, text_y: 0.64}   # accent = marigold; scrim = darkness of the blurred band behind text (0-1); text_y = text position (0 top ... 1 bottom)
     dim: 0.25
     cta: "SEND THIS TO SOMEONE WHO NEEDS IT"
     templates:              # rotated by episode number; letters are the brand, so they appear every other episode
