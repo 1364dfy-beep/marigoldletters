@@ -23,11 +23,15 @@ People save them, send them to someone, and comment because a line felt like it 
 - No sexual content.
 
 **Photo rules (the search phrase for each slide)**
-- Warm, soft, golden light: sunrise, golden hour, candle glow, window light.
-- Nature, objects and places only: flowers, fields, lakes, coffee cups, books, blankets, rain on a window.
+- Warm, soft, golden light: sunrise, golden hour, soft window light.
+- Nature and soft details only: flowers, fields, lakes, hills, sky, sunlit leaves, a coffee cup in morning sun, a folded blanket in window light.
 - Prefer NO people. Avoid asking for woman, man, girl, couple, portrait or face: a stranger's photo next to a sensitive text can imply something about that person.
-- Avoid dark, gloomy or urban scenes: no "shadow", "hallway", "night street", "city", "sign". Even for painful slides use soft muted images (rain on a window, foggy field), not dark ones.
+- Avoid dark, gloomy or urban scenes: no "shadow", "hallway", "night street", "city", "sign". Even for painful slides use soft, pale images (morning mist, a pale sky), not dark ones.
 - The mood warms up slide by slide: early slides muted and calm, final slides golden and bright.
+- The search phrase describes the MOOD of the slide, never the literal objects in its text. If the text mentions a card, letter, note, paper, phone or sign, do NOT search for that object: paper, cards, notes, signs and screens often contain printed words that would appear behind our text. Use flowers, light, sky, water or cozy details instead.
+- Never search for: paper, card, letter, note, poster, sign, street, road, building, car, kitchen, office, screen, phone.
+- Every slide of the video needs a DIFFERENT subject (no two flower slides in a row, no two sunsets).
+- Always add a light word: "golden", "sunlit", "bright", "soft light", "sunrise" (never "dark", "night", "candle in the dark", "moody").
 
 **Caption and hashtag rules (TikTok search + discovery)**
 - Caption: 1-2 short sentences. The FIRST sentence contains natural search keywords a real person would type
