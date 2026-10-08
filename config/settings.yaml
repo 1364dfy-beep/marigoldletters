@@ -3,8 +3,8 @@
 # Check https://ai.google.dev/gemini-api/docs/pricing for current free models
 # and put the newest Flash / Flash-TTS names at the top of each list.
 text_models:
-  - gemini-3.8-flash
   - gemini-3.5-flash-lite
+  - gemini-3.8-flash
   - gemini-2.5-flash
   - gemini-2.5-flash-lite
 tts_models:
@@ -31,8 +31,8 @@ profiles:
     hud: brand              # small channel name at the top
     channel_name: "MARIGOLD LETTERS"
     words: [120, 160]       # total on-screen words
-    slide: {font: "DejaVu Serif", size: 74, outline: 3, accent: "F5B83D"}   # accent = marigold (RGB hex)
-    dim: 0.30
+    slide: {font: "DejaVu Serif", size: 84, outline: 4, accent: "F5B83D"}   # accent = marigold (RGB hex)
+    dim: 0.25
     cta: "SEND THIS TO SOMEONE WHO NEEDS IT"
     templates:              # rotated by episode number; letters are the brand, so they appear every other episode
       - &letter
@@ -55,7 +55,7 @@ profiles:
       - ambition and purpose (professional growth, said warmly)
       - friendship and loyalty
       - gratitude and slowing down
-    photo_moods: "soft flowers (roses, peonies, wildflowers), calm landscapes (misty mountains, lake at sunrise, golden fields, ocean), romantic scenes (couple holding hands, silhouettes at sunset, candlelight), cozy details (coffee by a window, open book, rain on glass)"
+    photo_moods: "soft flowers (roses, peonies, wildflowers, marigolds), calm landscapes in warm light (sunrise lake, golden fields, misty hills at dawn, ocean at sunset), cozy details (steaming coffee by a window, open book, folded blankets, candlelight, rain on glass)"
 
   horror:
     bible: bible_horror.md
@@ -79,6 +79,7 @@ slideshow:
   reading_wps: 2.8           # reading speed used to time each slide
   min_slide_seconds: 3.5
   music_gain: 0.9
+  music_mode: both            # both = silent upload (add trending sound in TikTok) + backup with music | none | generated
 
 # --- Story ---
 arc_parts: 3                 # each story arc = N episodes
