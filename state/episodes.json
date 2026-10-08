@@ -39,6 +39,16 @@
       "summary": "An exploration of healing after heartbreak, addressing the non-linear nature of grief and recovery. Hook: You still catch yourself reaching for a phone that hasn't buzzed in months.",
       "template": "truths",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 5,
+      "date": "2026-10-08",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "Quiet Loyalty in Friendship",
+      "summary": "An emotional letter addressing the quiet, loyal friend who notices everything and worries their care goes unseen. The hook centers on keeping old birthday cards, leading to the core truth that true friendship stays when the room goes dark.",
+      "template": "letter",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null
