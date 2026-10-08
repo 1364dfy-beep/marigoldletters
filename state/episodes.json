@@ -29,6 +29,16 @@
       "summary": "An emotional letter celebrating personal integrity and doing the right thing when unobserved. Hook: Dear you, who fixes the crooked painting in an empty hallway just so it looks right.",
       "template": "letter",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 4,
+      "date": "2026-10-08",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "Healing After Heartbreak",
+      "summary": "An exploration of healing after heartbreak, addressing the non-linear nature of grief and recovery. Hook: You still catch yourself reaching for a phone that hasn't buzzed in months.",
+      "template": "truths",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null
