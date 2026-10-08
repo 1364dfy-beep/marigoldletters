@@ -12,6 +12,7 @@ Optional:
   TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID    to receive the caption on your phone (the video upload API cannot carry a caption)
 """
 import base64
+import html
 import os
 import time
 from pathlib import Path
@@ -180,17 +181,21 @@ def wait_for_status(publish_id: str, access_token: str, timeout: int = 300, poll
 
 
 # ------------------------------------------------------------------------------------------ notify
-def notify(text: str) -> None:
-    """Send `text` to Telegram (optional) and append it to the GitHub Actions run summary."""
+def notify(text: str, tg_messages: list[str] | None = None) -> None:
+    """Append `text` to the GitHub Actions run summary and send Telegram messages (optional).
+    tg_messages are sent as HTML (so a <code> block can be copied with one tap); default: [text]."""
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
             f.write(text + "\n\n")
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
-    if token and chat:
+    if not (token and chat):
+        return
+    for msg in tg_messages or [html.escape(text)]:
         try:
             requests.post(f"{TELEGRAM_API}/bot{token}/sendMessage",
-                          json={"chat_id": chat, "text": text[:4000]}, timeout=30).raise_for_status()
+                          json={"chat_id": chat, "text": msg[:4000], "parse_mode": "HTML",
+                                "disable_web_page_preview": True}, timeout=30).raise_for_status()
         except Exception as e:  # noqa: BLE001
             print(f"[notify] telegram failed: {str(e)[:150]}")
 
@@ -201,10 +206,14 @@ def publish_episode(video_path: str | Path, meta: dict) -> dict:
     publish_id = upload_to_inbox(video_path, token)
     status = wait_for_status(publish_id, token)
     print(f"[publish] uploaded to TikTok inbox: {publish_id} ({status})")
-    notify(
+    steps = (
         f"TikTok draft ready (episode {meta['episode']}).\n"
-        "Open TikTok -> Inbox -> tap the notification -> add a trending sound -> turn on 'AI-generated content' "
-        "if it applies -> Post.\n\n"
-        f"CAPTION (copy/paste):\n{meta['caption']}"
+        "1) Open TikTok -> Inbox -> tap the notification.\n"
+        "2) Add a TRENDING SOUND (this video is silent on purpose).\n"
+        "3) Paste the caption (next message: tap it to copy).\n"
+        "4) Turn on 'AI-generated content' if it applies -> Post."
     )
+    caption = meta["caption"]
+    notify(f"{steps}\n\nCAPTION:\n{caption}",
+           tg_messages=[html.escape(steps), f"<code>{html.escape(caption)}</code>"])
     return {"status": status, "publish_id": publish_id}
