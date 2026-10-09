@@ -59,6 +59,16 @@
       "summary": "An emotional first-person micro-story contrasting the exhausting performance of conditional affection with the quiet safety of steady love. Hook: For a long time, I thought love was a grand performance.",
       "template": "story",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 7,
+      "date": "2026-10-09",
+      "arc_title": "self-worth and self-love",
+      "part": 1,
+      "title": "Dear You Who Keeps Apologizing",
+      "summary": "An emotional letter addressing the habit of chronic apologizing and shrinking to keep the peace, pivoting to the truth that taking up space requires no permission. Hook: Dear you, who says sorry for taking up space in an empty room.",
+      "template": "letter",
+      "theme": "self-worth and self-love"
     }
   ],
   "arc": null,
@@ -75,6 +85,20 @@
       "golden autumn trees",
       "golden reeds lake",
       "orange flowers sunlight"
+    ],
+    [
+      "soft fog over hills",
+      "bare branches soft sunrise",
+      "pale sky at dawn",
+      "quiet beach at dawn",
+      "bird on branch sunrise",
+      "cherry blossom branch",
+      "calm lake morning",
+      "pink magnolia tree",
+      "glowing sunset beach",
+      "golden hour meadow",
+      "sunflower close up",
+      "orange sky sunset clouds"
     ]
   ]
 }
