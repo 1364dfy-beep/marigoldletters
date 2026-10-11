@@ -79,6 +79,16 @@
       "summary": "An exploration of four quiet, everyday signs that someone is learning to slow down and appreciate the present moment. The hook introduces the four signs, and the core quotable line states that peace is the presence of your own attention.",
       "template": "signs",
       "theme": "gratitude and slowing down"
+    },
+    {
+      "num": 9,
+      "date": "2026-10-11",
+      "arc_title": "kindness and respect in relationships",
+      "part": 1,
+      "title": "Dear You Who Wonders If Kindness Is Weakness",
+      "summary": "An emotional letter addressing the fear that kindness is a weakness, pivoting to the truth that true respect never requires you to shrink. Hook: Dear you, who lowers your voice when someone else raises theirs.",
+      "template": "letter",
+      "theme": "kindness and respect in relationships"
     }
   ],
   "arc": null,
@@ -122,6 +132,20 @@
       "golden hills sunset",
       "hay bales golden hour",
       "sunrise over mountains"
+    ],
+    [
+      "soft pink magnolia",
+      "layered clouds soft light",
+      "pastel sunrise sky",
+      "pale pink clouds",
+      "mountain lake sunrise",
+      "ocean waves sunlit",
+      "sunflower field",
+      "vineyard rows sunlight",
+      "amber leaves backlit",
+      "marigold flowers",
+      "golden clouds sunrise",
+      "sunrise lake reflection"
     ]
   ]
 }
