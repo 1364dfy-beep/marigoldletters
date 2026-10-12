@@ -89,6 +89,16 @@
       "summary": "An emotional letter addressing the fear that kindness is a weakness, pivoting to the truth that true respect never requires you to shrink. Hook: Dear you, who lowers your voice when someone else raises theirs.",
       "template": "letter",
       "theme": "kindness and respect in relationships"
+    },
+    {
+      "num": 10,
+      "date": "2026-10-12",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Quiet Ambition and Professional Worth",
+      "summary": "An exploration of ambition and purpose, shifting away from hustle-culture exhaustion toward integrity-driven work, anchored by the truth that you should build a career honoring your soul before your resume.",
+      "template": "truths",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
@@ -146,6 +156,18 @@
       "marigold flowers",
       "golden clouds sunrise",
       "sunrise lake reflection"
+    ],
+    [
+      "soft sand dunes light",
+      "pale peonies",
+      "white wildflowers soft light",
+      "frosted leaves sunrise",
+      "daffodils field",
+      "palm leaves sunlight",
+      "folded blanket window light",
+      "golden autumn trees",
+      "warm sunbeams through trees",
+      "honey colored light field"
     ]
   ]
 }
