@@ -99,6 +99,16 @@
       "summary": "An exploration of ambition and purpose, shifting away from hustle-culture exhaustion toward integrity-driven work, anchored by the truth that you should build a career honoring your soul before your resume.",
       "template": "truths",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 11,
+      "date": "2026-10-13",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "The Friend Who Remembers",
+      "summary": "An emotional letter addressing the reliable, loyal friend who worries their care goes unnoticed, anchored by the truth that their gentle consistency is a safe harbor for everyone around them.",
+      "template": "letter",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
@@ -168,6 +178,19 @@
       "golden autumn trees",
       "warm sunbeams through trees",
       "honey colored light field"
+    ],
+    [
+      "still pond reflection",
+      "quiet beach at dawn",
+      "white hydrangea flowers",
+      "soft fog over hills",
+      "olive grove sunlight",
+      "cherry blossom branch",
+      "green meadow sunlight",
+      "calm lake morning",
+      "orange flowers sunlight",
+      "sunset behind palm leaves",
+      "lavender field sunset"
     ]
   ]
 }
