@@ -109,6 +109,16 @@
       "summary": "An emotional letter addressing the reliable, loyal friend who worries their care goes unnoticed, anchored by the truth that their gentle consistency is a safe harbor for everyone around them.",
       "template": "letter",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 12,
+      "date": "2026-10-14",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "The Quiet Architecture of Steady Love",
+      "summary": "A first-person micro-story exploring the transition from chaotic conditional affection to the quiet safety of steady love, anchored by the quotable line: Steady love does not demand you earn your place at the table.",
+      "template": "story",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
@@ -191,6 +201,19 @@
       "orange flowers sunlight",
       "sunset behind palm leaves",
       "lavender field sunset"
+    ],
+    [
+      "dew on grass",
+      "calm shoreline morning",
+      "bare branches soft sunrise",
+      "gentle morning haze valley",
+      "sunlit leaves",
+      "tulip field",
+      "lush green valley",
+      "sunlit forest path",
+      "yellow wildflowers",
+      "cosmos flowers sunset",
+      "glowing sunset beach"
     ]
   ]
 }
