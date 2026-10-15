@@ -119,6 +119,16 @@
       "summary": "A first-person micro-story exploring the transition from chaotic conditional affection to the quiet safety of steady love, anchored by the quotable line: Steady love does not demand you earn your place at the table.",
       "template": "story",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 13,
+      "date": "2026-10-15",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "Healing After Heartbreak",
+      "summary": "An emotional letter addressing someone healing after heartbreak, moving from the lingering physical habits of absence to the realization that grief softens into self-restoration. The core quotable line is: Healing is not forgetting the warmth; it is learning to become your own steady sun.",
+      "template": "letter",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
@@ -214,6 +224,20 @@
       "yellow wildflowers",
       "cosmos flowers sunset",
       "glowing sunset beach"
+    ],
+    [
+      "pale sky at dawn",
+      "wheat stalks soft focus",
+      "morning mist over field",
+      "white daisies meadow",
+      "steaming tea cup morning sun",
+      "coastal cliffs sunlight",
+      "pink magnolia tree",
+      "butterfly on flower",
+      "rainbow over green field",
+      "golden wheat field",
+      "amber leaves backlit",
+      "orange sky sunset clouds"
     ]
   ]
 }
