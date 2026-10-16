@@ -129,6 +129,16 @@
       "summary": "An emotional letter addressing someone healing after heartbreak, moving from the lingering physical habits of absence to the realization that grief softens into self-restoration. The core quotable line is: Healing is not forgetting the warmth; it is learning to become your own steady sun.",
       "template": "letter",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 14,
+      "date": "2026-10-16",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Quiet Signs of Real Integrity",
+      "summary": "An exploration of everyday integrity and character through nine specific, ordinary habits, anchored by the quotable truth that character is simply who you become when every shortcut is wide open.",
+      "template": "signs",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
@@ -238,6 +248,19 @@
       "golden wheat field",
       "amber leaves backlit",
       "orange sky sunset clouds"
+    ],
+    [
+      "white feather soft light",
+      "light mist forest sunbeams",
+      "layered clouds soft light",
+      "pastel sunrise sky",
+      "rose garden morning",
+      "folded blanket window light",
+      "poppy field",
+      "palm leaves sunlight",
+      "warm sunbeams through trees",
+      "honey colored light field",
+      "sunflower close up"
     ]
   ]
 }
