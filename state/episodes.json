@@ -139,6 +139,16 @@
       "summary": "An exploration of everyday integrity and character through nine specific, ordinary habits, anchored by the quotable truth that character is simply who you become when every shortcut is wide open.",
       "template": "signs",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 15,
+      "date": "2026-10-17",
+      "arc_title": "self-worth and self-love",
+      "part": 1,
+      "title": "Dear You Who Measures Your Worth by Output",
+      "summary": "An emotional letter addressing the habit of tying self-worth to productivity, moving from exhaustion to the realization that human value is unconditional. Anchored by the quote: You are a living soul, not a machine designed to convert time into approval.",
+      "template": "letter",
+      "theme": "self-worth and self-love"
     }
   ],
   "arc": null,
@@ -261,6 +271,20 @@
       "warm sunbeams through trees",
       "honey colored light field",
       "sunflower close up"
+    ],
+    [
+      "sheer curtains window light",
+      "dried grass soft light",
+      "quiet misty lake",
+      "soft sand dunes light",
+      "vineyard rows sunlight",
+      "cherry blossom branch",
+      "pink peony close up",
+      "stone path garden sunlight",
+      "marigold flowers",
+      "golden hills sunset",
+      "golden reeds lake",
+      "orange flowers sunlight"
     ]
   ]
 }
