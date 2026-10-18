@@ -149,23 +149,20 @@
       "summary": "An emotional letter addressing the habit of tying self-worth to productivity, moving from exhaustion to the realization that human value is unconditional. Anchored by the quote: You are a living soul, not a machine designed to convert time into approval.",
       "template": "letter",
       "theme": "self-worth and self-love"
+    },
+    {
+      "num": 16,
+      "date": "2026-10-18",
+      "arc_title": "gratitude and slowing down",
+      "part": 1,
+      "title": "Quiet Truths About Slowing Down",
+      "summary": "An exploration of gratitude and slowing down through warm, hard truths that challenge the addiction to rushing, anchored by the insight that speed is often just fear wearing comfortable shoes.",
+      "template": "truths",
+      "theme": "gratitude and slowing down"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "dandelion seeds soft light",
-      "quiet misty lake",
-      "light mist forest sunbeams",
-      "calm shoreline morning",
-      "butterfly on flower",
-      "palm leaves sunlight",
-      "rose garden morning",
-      "coastal cliffs sunlight",
-      "golden autumn trees",
-      "golden reeds lake",
-      "orange flowers sunlight"
-    ],
     [
       "soft fog over hills",
       "bare branches soft sunrise",
@@ -285,6 +282,19 @@
       "golden hills sunset",
       "golden reeds lake",
       "orange flowers sunlight"
+    ],
+    [
+      "pale peonies",
+      "soft pink magnolia",
+      "lavender field haze",
+      "white hydrangea flowers",
+      "olive grove sunlight",
+      "sunlit forest path",
+      "bird on branch sunrise",
+      "green meadow sunlight",
+      "golden hour meadow",
+      "lavender field sunset",
+      "sunlit dandelion"
     ]
   ]
 }
