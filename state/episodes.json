@@ -159,24 +159,20 @@
       "summary": "An exploration of gratitude and slowing down through warm, hard truths that challenge the addiction to rushing, anchored by the insight that speed is often just fear wearing comfortable shoes.",
       "template": "truths",
       "theme": "gratitude and slowing down"
+    },
+    {
+      "num": 17,
+      "date": "2026-10-19",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "Dear You Who Is Learning What Steady Love Looks Like",
+      "summary": "An emotional letter addressing the habit of waiting for chaos in a healthy relationship, anchored by the insight that real love is a hearth that lets you rest, not a fire that burns you.",
+      "template": "letter",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "soft fog over hills",
-      "bare branches soft sunrise",
-      "pale sky at dawn",
-      "quiet beach at dawn",
-      "bird on branch sunrise",
-      "cherry blossom branch",
-      "calm lake morning",
-      "pink magnolia tree",
-      "glowing sunset beach",
-      "golden hour meadow",
-      "sunflower close up",
-      "orange sky sunset clouds"
-    ],
     [
       "dew on grass",
       "lavender field haze",
@@ -295,6 +291,20 @@
       "golden hour meadow",
       "lavender field sunset",
       "sunlit dandelion"
+    ],
+    [
+      "pale sky at dawn",
+      "soft fog over hills",
+      "bare branches soft sunrise",
+      "white daisies meadow",
+      "autumn leaves sunlight",
+      "fern forest sunlight",
+      "lush green valley",
+      "coastal cliffs sunlight",
+      "yellow wildflowers",
+      "sunrise lake reflection",
+      "sunset over ocean",
+      "golden clouds sunrise"
     ]
   ]
 }
