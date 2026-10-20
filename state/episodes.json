@@ -169,23 +169,20 @@
       "summary": "An emotional letter addressing the habit of waiting for chaos in a healthy relationship, anchored by the insight that real love is a hearth that lets you rest, not a fire that burns you.",
       "template": "letter",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 18,
+      "date": "2026-10-20",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "The Morning I Stopped Rehearsing",
+      "summary": "A first-person micro-story about healing after heartbreak, moving from rehearsed reunions to the quiet realization of letting go. Anchored by the quote: Peace is not the absence of the past; it is the sudden quiet when you put the heavy bags down.",
+      "template": "story",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "dew on grass",
-      "lavender field haze",
-      "gentle morning haze valley",
-      "morning mist over field",
-      "lush green valley",
-      "sunlit forest path",
-      "pink peony close up",
-      "stone path garden sunlight",
-      "golden hills sunset",
-      "hay bales golden hour",
-      "sunrise over mountains"
-    ],
     [
       "soft pink magnolia",
       "layered clouds soft light",
@@ -305,6 +302,18 @@
       "sunrise lake reflection",
       "sunset over ocean",
       "golden clouds sunrise"
+    ],
+    [
+      "pale pink clouds",
+      "white feather soft light",
+      "layered clouds soft light",
+      "morning mist over field",
+      "steaming tea cup morning sun",
+      "butterfly on flower",
+      "poppy field",
+      "lemon tree sunlight",
+      "amber leaves backlit",
+      "golden sunlight forest"
     ]
   ]
 }
