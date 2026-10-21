@@ -179,24 +179,20 @@
       "summary": "A first-person micro-story about healing after heartbreak, moving from rehearsed reunions to the quiet realization of letting go. Anchored by the quote: Peace is not the absence of the past; it is the sudden quiet when you put the heavy bags down.",
       "template": "story",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 19,
+      "date": "2026-10-21",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "Dear You Who Is Learning Who Stays",
+      "summary": "An emotional letter addressing the lingering fear of abandonment in friendships, moving from the pain of past fading connections to the realization that true loyalty is effortless and mutual.",
+      "template": "letter",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "soft pink magnolia",
-      "layered clouds soft light",
-      "pastel sunrise sky",
-      "pale pink clouds",
-      "mountain lake sunrise",
-      "ocean waves sunlit",
-      "sunflower field",
-      "vineyard rows sunlight",
-      "amber leaves backlit",
-      "marigold flowers",
-      "golden clouds sunrise",
-      "sunrise lake reflection"
-    ],
     [
       "soft sand dunes light",
       "pale peonies",
@@ -314,6 +310,19 @@
       "lemon tree sunlight",
       "amber leaves backlit",
       "golden sunlight forest"
+    ],
+    [
+      "gentle morning haze valley",
+      "light mist forest sunbeams",
+      "calm shoreline morning",
+      "seashells on sand morning",
+      "tulip field",
+      "sunlit leaves",
+      "ocean waves sunlit",
+      "cherry blossom branch",
+      "golden reeds lake",
+      "sparkling sunlit water",
+      "orange sky sunset clouds"
     ]
   ]
 }
