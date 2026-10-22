@@ -189,22 +189,20 @@
       "summary": "An emotional letter addressing the lingering fear of abandonment in friendships, moving from the pain of past fading connections to the realization that true loyalty is effortless and mutual.",
       "template": "letter",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 20,
+      "date": "2026-10-22",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Quiet Signs of True Ambition",
+      "summary": "An exploration of ambition and professional purpose through seven quiet signs of healthy growth, anchored by the insight that true ambition does not demand you set fire to your own peace.",
+      "template": "signs",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "soft sand dunes light",
-      "pale peonies",
-      "white wildflowers soft light",
-      "frosted leaves sunrise",
-      "daffodils field",
-      "palm leaves sunlight",
-      "folded blanket window light",
-      "golden autumn trees",
-      "warm sunbeams through trees",
-      "honey colored light field"
-    ],
     [
       "still pond reflection",
       "quiet beach at dawn",
@@ -323,6 +321,19 @@
       "golden reeds lake",
       "sparkling sunlit water",
       "orange sky sunset clouds"
+    ],
+    [
+      "quiet beach at dawn",
+      "dandelion seeds soft light",
+      "pastel sunrise sky",
+      "pale peonies",
+      "sunflower field",
+      "green meadow sunlight",
+      "wildflower meadow",
+      "daffodils field",
+      "orange flowers sunlight",
+      "marigold flowers",
+      "honey colored light field"
     ]
   ]
 }
