@@ -199,23 +199,20 @@
       "summary": "An exploration of ambition and professional purpose through seven quiet signs of healthy growth, anchored by the insight that true ambition does not demand you set fire to your own peace.",
       "template": "signs",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 21,
+      "date": "2026-10-23",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Dear You Who Keeps Your Promises in the Dark",
+      "summary": "An emotional letter addressing personal integrity and character when no one is watching, anchored by the quotable insight that integrity is the quiet promise you keep to yourself in the dark.",
+      "template": "letter",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "still pond reflection",
-      "quiet beach at dawn",
-      "white hydrangea flowers",
-      "soft fog over hills",
-      "olive grove sunlight",
-      "cherry blossom branch",
-      "green meadow sunlight",
-      "calm lake morning",
-      "orange flowers sunlight",
-      "sunset behind palm leaves",
-      "lavender field sunset"
-    ],
     [
       "dew on grass",
       "calm shoreline morning",
@@ -334,6 +331,19 @@
       "orange flowers sunlight",
       "marigold flowers",
       "honey colored light field"
+    ],
+    [
+      "quiet misty lake",
+      "still pond reflection",
+      "white hydrangea flowers",
+      "white wildflowers soft light",
+      "rose garden morning",
+      "vineyard rows sunlight",
+      "mountain lake sunrise",
+      "pink peony close up",
+      "sunset behind palm leaves",
+      "hay bales golden hour",
+      "sunflower close up"
     ]
   ]
 }
