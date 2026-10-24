@@ -209,23 +209,20 @@
       "summary": "An emotional letter addressing personal integrity and character when no one is watching, anchored by the quotable insight that integrity is the quiet promise you keep to yourself in the dark.",
       "template": "letter",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 22,
+      "date": "2026-10-24",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "Quiet Truths About What Real Steady Love Looks Like",
+      "summary": "An exploration of what real, steady love looks like through eleven warm, hard truths that move from the anxiety of waiting for chaos to the calm relief of emotional safety. Anchored by the insight that steady love is a quiet room you never have to fight to stay inside.",
+      "template": "truths",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "dew on grass",
-      "calm shoreline morning",
-      "bare branches soft sunrise",
-      "gentle morning haze valley",
-      "sunlit leaves",
-      "tulip field",
-      "lush green valley",
-      "sunlit forest path",
-      "yellow wildflowers",
-      "cosmos flowers sunset",
-      "glowing sunset beach"
-    ],
     [
       "pale sky at dawn",
       "wheat stalks soft focus",
@@ -344,6 +341,19 @@
       "sunset behind palm leaves",
       "hay bales golden hour",
       "sunflower close up"
+    ],
+    [
+      "pale sky at dawn",
+      "morning mist over field",
+      "sheer curtains window light",
+      "soft pink magnolia",
+      "poppy field",
+      "pink magnolia tree",
+      "bird on branch sunrise",
+      "sunlit forest path",
+      "tulips golden light",
+      "golden wheat field",
+      "lavender field sunset"
     ]
   ]
 }
