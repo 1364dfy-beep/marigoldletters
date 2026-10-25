@@ -219,24 +219,20 @@
       "summary": "An exploration of what real, steady love looks like through eleven warm, hard truths that move from the anxiety of waiting for chaos to the calm relief of emotional safety. Anchored by the insight that steady love is a quiet room you never have to fight to stay inside.",
       "template": "truths",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 23,
+      "date": "2026-10-25",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "Dear You Who Still Checks the Door",
+      "summary": "An emotional letter addressing the lingering habit of waiting for closure after a breakup, moving from exhaustion to the realization that healing is remembering your former self. Anchored by the quote: Healing is not forgetting who they were; it is remembering who you were before they arrived.",
+      "template": "letter",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale sky at dawn",
-      "wheat stalks soft focus",
-      "morning mist over field",
-      "white daisies meadow",
-      "steaming tea cup morning sun",
-      "coastal cliffs sunlight",
-      "pink magnolia tree",
-      "butterfly on flower",
-      "rainbow over green field",
-      "golden wheat field",
-      "amber leaves backlit",
-      "orange sky sunset clouds"
-    ],
     [
       "white feather soft light",
       "light mist forest sunbeams",
@@ -354,6 +350,19 @@
       "tulips golden light",
       "golden wheat field",
       "lavender field sunset"
+    ],
+    [
+      "lavender field haze",
+      "bare branches soft sunrise",
+      "seashells on sand morning",
+      "pale pink clouds",
+      "stone path garden sunlight",
+      "ocean waves sunlit",
+      "olive grove sunlight",
+      "calm lake morning",
+      "golden reeds lake",
+      "sparkling sunlit water",
+      "orange sky sunset clouds"
     ]
   ]
 }
