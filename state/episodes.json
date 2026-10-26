@@ -229,23 +229,20 @@
       "summary": "An emotional letter addressing the lingering habit of waiting for closure after a breakup, moving from exhaustion to the realization that healing is remembering your former self. Anchored by the quote: Healing is not forgetting who they were; it is remembering who you were before they arrived.",
       "template": "letter",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 24,
+      "date": "2026-10-26",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "The Kitchen Table at Two AM",
+      "summary": "A first-person micro-story about shifting from anxious score-keeping in friendships to realizing true loyalty is quiet and unconditional, anchored by the quotable insight that real loyalty is not about grand gestures.",
+      "template": "story",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white feather soft light",
-      "light mist forest sunbeams",
-      "layered clouds soft light",
-      "pastel sunrise sky",
-      "rose garden morning",
-      "folded blanket window light",
-      "poppy field",
-      "palm leaves sunlight",
-      "warm sunbeams through trees",
-      "honey colored light field",
-      "sunflower close up"
-    ],
     [
       "sheer curtains window light",
       "dried grass soft light",
@@ -363,6 +360,19 @@
       "golden reeds lake",
       "sparkling sunlit water",
       "orange sky sunset clouds"
+    ],
+    [
+      "gentle morning haze valley",
+      "cotton grass field",
+      "soft fog over hills",
+      "pale peonies",
+      "coastal cliffs sunlight",
+      "butterfly on flower",
+      "steaming tea cup morning sun",
+      "autumn leaves sunlight",
+      "golden autumn trees",
+      "orange flowers sunlight",
+      "yellow wildflowers"
     ]
   ]
 }
