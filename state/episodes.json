@@ -239,24 +239,20 @@
       "summary": "A first-person micro-story about shifting from anxious score-keeping in friendships to realizing true loyalty is quiet and unconditional, anchored by the quotable insight that real loyalty is not about grand gestures.",
       "template": "story",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 25,
+      "date": "2026-10-27",
+      "arc_title": "self-worth and self-love",
+      "part": 1,
+      "title": "Dear You Who Apologizes for Taking Up Space",
+      "summary": "An emotional letter addressing the habit of shrinking and apologizing for taking up space, anchored by the quotable insight that taking up space is not a crime; it is the first act of belonging to yourself.",
+      "template": "letter",
+      "theme": "self-worth and self-love"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "sheer curtains window light",
-      "dried grass soft light",
-      "quiet misty lake",
-      "soft sand dunes light",
-      "vineyard rows sunlight",
-      "cherry blossom branch",
-      "pink peony close up",
-      "stone path garden sunlight",
-      "marigold flowers",
-      "golden hills sunset",
-      "golden reeds lake",
-      "orange flowers sunlight"
-    ],
     [
       "pale peonies",
       "soft pink magnolia",
@@ -373,6 +369,20 @@
       "golden autumn trees",
       "orange flowers sunlight",
       "yellow wildflowers"
+    ],
+    [
+      "wheat stalks soft focus",
+      "dandelion seeds soft light",
+      "white hydrangea flowers",
+      "soft sand dunes light",
+      "palm leaves sunlight",
+      "cherry blossom branch",
+      "fern forest sunlight",
+      "tulip field",
+      "honey colored light field",
+      "glowing sunset beach",
+      "golden hills sunset",
+      "golden sunlight forest"
     ]
   ]
 }
