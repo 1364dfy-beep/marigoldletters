@@ -249,23 +249,20 @@
       "summary": "An emotional letter addressing the habit of shrinking and apologizing for taking up space, anchored by the quotable insight that taking up space is not a crime; it is the first act of belonging to yourself.",
       "template": "letter",
       "theme": "self-worth and self-love"
+    },
+    {
+      "num": 26,
+      "date": "2026-10-28",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Quiet Proof Your Work Matters",
+      "summary": "An exploration of ambition and professional purpose through six quiet signs of healthy growth, anchored by the insight that true ambition does not need applause.",
+      "template": "signs",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale peonies",
-      "soft pink magnolia",
-      "lavender field haze",
-      "white hydrangea flowers",
-      "olive grove sunlight",
-      "sunlit forest path",
-      "bird on branch sunrise",
-      "green meadow sunlight",
-      "golden hour meadow",
-      "lavender field sunset",
-      "sunlit dandelion"
-    ],
     [
       "pale sky at dawn",
       "soft fog over hills",
@@ -383,6 +380,16 @@
       "glowing sunset beach",
       "golden hills sunset",
       "golden sunlight forest"
+    ],
+    [
+      "sheer curtains window light",
+      "quiet misty lake",
+      "white daisies meadow",
+      "lush green valley",
+      "green meadow sunlight",
+      "wildflower meadow",
+      "tulips golden light",
+      "golden wheat field"
     ]
   ]
 }
