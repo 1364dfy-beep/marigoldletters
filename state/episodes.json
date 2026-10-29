@@ -259,24 +259,20 @@
       "summary": "An exploration of ambition and professional purpose through six quiet signs of healthy growth, anchored by the insight that true ambition does not need applause.",
       "template": "signs",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 27,
+      "date": "2026-10-29",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Dear You Who Chooses the Hard Right Over the Easy Wrong",
+      "summary": "An emotional letter addressing personal integrity and quiet character when no one is watching, anchored by the insight that character is simply the promises you keep to yourself when the doors are locked.",
+      "template": "letter",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale sky at dawn",
-      "soft fog over hills",
-      "bare branches soft sunrise",
-      "white daisies meadow",
-      "autumn leaves sunlight",
-      "fern forest sunlight",
-      "lush green valley",
-      "coastal cliffs sunlight",
-      "yellow wildflowers",
-      "sunrise lake reflection",
-      "sunset over ocean",
-      "golden clouds sunrise"
-    ],
     [
       "pale pink clouds",
       "white feather soft light",
@@ -390,6 +386,20 @@
       "wildflower meadow",
       "tulips golden light",
       "golden wheat field"
+    ],
+    [
+      "bare branches soft sunrise",
+      "pale pink clouds",
+      "seashells on sand morning",
+      "frosted leaves sunrise",
+      "ocean waves sunlit",
+      "stone path garden sunlight",
+      "vineyard rows sunlight",
+      "mountain lake sunrise",
+      "sunset over ocean",
+      "lavender field sunset",
+      "sparkling sunlit water",
+      "hay bales golden hour"
     ]
   ]
 }
