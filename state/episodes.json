@@ -269,22 +269,20 @@
       "summary": "An emotional letter addressing personal integrity and quiet character when no one is watching, anchored by the insight that character is simply the promises you keep to yourself when the doors are locked.",
       "template": "letter",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 28,
+      "date": "2026-10-30",
+      "arc_title": "kindness and respect in relationships",
+      "part": 1,
+      "title": "Quiet Truths About Kindness and Respect in Relationships",
+      "summary": "An exploration of kindness and respect through twelve warm truths, moving from the exhaustion of conditional care to the calm relief of demanding true emotional safety. Anchored by the insight that kindness without respect is just a polished way of keeping you quiet.",
+      "template": "truths",
+      "theme": "kindness and respect in relationships"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale pink clouds",
-      "white feather soft light",
-      "layered clouds soft light",
-      "morning mist over field",
-      "steaming tea cup morning sun",
-      "butterfly on flower",
-      "poppy field",
-      "lemon tree sunlight",
-      "amber leaves backlit",
-      "golden sunlight forest"
-    ],
     [
       "gentle morning haze valley",
       "light mist forest sunbeams",
@@ -400,6 +398,20 @@
       "lavender field sunset",
       "sparkling sunlit water",
       "hay bales golden hour"
+    ],
+    [
+      "white wildflowers soft light",
+      "dew on grass",
+      "lavender field haze",
+      "morning mist over field",
+      "autumn leaves sunlight",
+      "sunlit leaves",
+      "pink magnolia tree",
+      "olive grove sunlight",
+      "warm sunbeams through trees",
+      "rainbow over green field",
+      "sunrise over mountains",
+      "sunflower close up"
     ]
   ]
 }
