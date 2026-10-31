@@ -279,23 +279,20 @@
       "summary": "An exploration of kindness and respect through twelve warm truths, moving from the exhaustion of conditional care to the calm relief of demanding true emotional safety. Anchored by the insight that kindness without respect is just a polished way of keeping you quiet.",
       "template": "truths",
       "theme": "kindness and respect in relationships"
+    },
+    {
+      "num": 29,
+      "date": "2026-10-31",
+      "arc_title": "gratitude and slowing down",
+      "part": 1,
+      "title": "Dear You Who Forgot How to Rest",
+      "summary": "An emotional letter addressing chronic overworking and the guilt of resting, anchored by the quotable insight that rest is not a reward for finishing your life, but the soil where it grows.",
+      "template": "letter",
+      "theme": "gratitude and slowing down"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "gentle morning haze valley",
-      "light mist forest sunbeams",
-      "calm shoreline morning",
-      "seashells on sand morning",
-      "tulip field",
-      "sunlit leaves",
-      "ocean waves sunlit",
-      "cherry blossom branch",
-      "golden reeds lake",
-      "sparkling sunlit water",
-      "orange sky sunset clouds"
-    ],
     [
       "quiet beach at dawn",
       "dandelion seeds soft light",
@@ -412,6 +409,20 @@
       "rainbow over green field",
       "sunrise over mountains",
       "sunflower close up"
+    ],
+    [
+      "light mist forest sunbeams",
+      "white hydrangea flowers",
+      "pastel sunrise sky",
+      "white feather soft light",
+      "sunlit forest path",
+      "palm leaves sunlight",
+      "rose garden morning",
+      "calm lake morning",
+      "golden hills sunset",
+      "lemon tree sunlight",
+      "golden hour meadow",
+      "golden reeds lake"
     ]
   ]
 }
