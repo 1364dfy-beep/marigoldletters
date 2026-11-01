@@ -289,23 +289,20 @@
       "summary": "An emotional letter addressing chronic overworking and the guilt of resting, anchored by the quotable insight that rest is not a reward for finishing your life, but the soil where it grows.",
       "template": "letter",
       "theme": "gratitude and slowing down"
+    },
+    {
+      "num": 30,
+      "date": "2026-11-01",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "The Weight of an Old Coat",
+      "summary": "A first-person micro-story about moving from score-keeping anxiety in friendship to realizing true loyalty means staying when things get quiet. Anchored by the quote: True friendship is not about who stands closest to the fire; it is about who stays when the wood runs out.",
+      "template": "story",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "quiet beach at dawn",
-      "dandelion seeds soft light",
-      "pastel sunrise sky",
-      "pale peonies",
-      "sunflower field",
-      "green meadow sunlight",
-      "wildflower meadow",
-      "daffodils field",
-      "orange flowers sunlight",
-      "marigold flowers",
-      "honey colored light field"
-    ],
     [
       "quiet misty lake",
       "still pond reflection",
@@ -423,6 +420,19 @@
       "lemon tree sunlight",
       "golden hour meadow",
       "golden reeds lake"
+    ],
+    [
+      "dried grass soft light",
+      "white daisies meadow",
+      "layered clouds soft light",
+      "gentle morning haze valley",
+      "wildflower meadow",
+      "daffodils field",
+      "rolling green hills",
+      "poppy field",
+      "sunlit dandelion",
+      "cosmos flowers sunset",
+      "orange flowers sunlight"
     ]
   ]
 }
