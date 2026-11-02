@@ -299,23 +299,20 @@
       "summary": "A first-person micro-story about moving from score-keeping anxiety in friendship to realizing true loyalty means staying when things get quiet. Anchored by the quote: True friendship is not about who stands closest to the fire; it is about who stays when the wood runs out.",
       "template": "story",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 31,
+      "date": "2026-11-02",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "Dear You Who Wears the Silence",
+      "summary": "An emotional second-person letter addressing the lingering grief of avoiding places and drafting phantom apologies, moving to the realization that heartbreak proves the depth of one's capacity to care. Anchored by the quote: Heartbreak does not mean your story is broken; it just means your capacity to care was real.",
+      "template": "letter",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "quiet misty lake",
-      "still pond reflection",
-      "white hydrangea flowers",
-      "white wildflowers soft light",
-      "rose garden morning",
-      "vineyard rows sunlight",
-      "mountain lake sunrise",
-      "pink peony close up",
-      "sunset behind palm leaves",
-      "hay bales golden hour",
-      "sunflower close up"
-    ],
     [
       "pale sky at dawn",
       "morning mist over field",
@@ -433,6 +430,20 @@
       "sunlit dandelion",
       "cosmos flowers sunset",
       "orange flowers sunlight"
+    ],
+    [
+      "still pond reflection",
+      "dandelion seeds soft light",
+      "soft fog over hills",
+      "soft pink magnolia",
+      "pink peony close up",
+      "sunflower field",
+      "stone path garden sunlight",
+      "bird on branch sunrise",
+      "golden clouds sunrise",
+      "sparkling sunlit water",
+      "glowing sunset beach",
+      "tulips golden light"
     ]
   ]
 }
