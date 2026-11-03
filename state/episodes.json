@@ -309,23 +309,20 @@
       "summary": "An emotional second-person letter addressing the lingering grief of avoiding places and drafting phantom apologies, moving to the realization that heartbreak proves the depth of one's capacity to care. Anchored by the quote: Heartbreak does not mean your story is broken; it just means your capacity to care was real.",
       "template": "letter",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 32,
+      "date": "2026-11-03",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Five Quiet Signs Your Ambition is Finally Your Own",
+      "summary": "Five quiet signs that professional ambition has matured from seeking outside applause into a deep, personal commitment to honest work. Anchored by the insight that true ambition does not demand a crown, it just asks for room to build something honest.",
+      "template": "signs",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale sky at dawn",
-      "morning mist over field",
-      "sheer curtains window light",
-      "soft pink magnolia",
-      "poppy field",
-      "pink magnolia tree",
-      "bird on branch sunrise",
-      "sunlit forest path",
-      "tulips golden light",
-      "golden wheat field",
-      "lavender field sunset"
-    ],
     [
       "lavender field haze",
       "bare branches soft sunrise",
@@ -444,6 +441,18 @@
       "sparkling sunlit water",
       "glowing sunset beach",
       "tulips golden light"
+    ],
+    [
+      "lavender field haze",
+      "bare branches soft sunrise",
+      "quiet misty lake",
+      "pale pink clouds",
+      "tulip field",
+      "folded blanket window light",
+      "cherry blossom branch",
+      "orange sky sunset clouds",
+      "lavender field sunset",
+      "yellow wildflowers"
     ]
   ]
 }
