@@ -319,23 +319,20 @@
       "summary": "Five quiet signs that professional ambition has matured from seeking outside applause into a deep, personal commitment to honest work. Anchored by the insight that true ambition does not demand a crown, it just asks for room to build something honest.",
       "template": "signs",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 33,
+      "date": "2026-11-04",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "Dear You Who Wonders What Steady Love Feels Like",
+      "summary": "An emotional letter addressing the habit of waiting for the other shoe to drop in relationships, moving toward the calm realization of what healthy, steady love looks like. Anchored by the insight that steady love is a hearth that keeps you warm rather than a fire that burns you.",
+      "template": "letter",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "lavender field haze",
-      "bare branches soft sunrise",
-      "seashells on sand morning",
-      "pale pink clouds",
-      "stone path garden sunlight",
-      "ocean waves sunlit",
-      "olive grove sunlight",
-      "calm lake morning",
-      "golden reeds lake",
-      "sparkling sunlit water",
-      "orange sky sunset clouds"
-    ],
     [
       "gentle morning haze valley",
       "cotton grass field",
@@ -453,6 +450,20 @@
       "orange sky sunset clouds",
       "lavender field sunset",
       "yellow wildflowers"
+    ],
+    [
+      "seashells on sand morning",
+      "soft sand dunes light",
+      "frosted leaves sunrise",
+      "pale sky at dawn",
+      "fern forest sunlight",
+      "calm lake morning",
+      "palm leaves sunlight",
+      "mountain lake sunrise",
+      "warm sunbeams through trees",
+      "sunrise over mountains",
+      "sunset over ocean",
+      "sunset behind palm leaves"
     ]
   ]
 }
