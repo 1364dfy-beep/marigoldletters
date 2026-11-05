@@ -329,23 +329,20 @@
       "summary": "An emotional letter addressing the habit of waiting for the other shoe to drop in relationships, moving toward the calm realization of what healthy, steady love looks like. Anchored by the insight that steady love is a hearth that keeps you warm rather than a fire that burns you.",
       "template": "letter",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 34,
+      "date": "2026-11-05",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Quiet Truths About Integrity When No One Is Watching",
+      "summary": "An exploration of personal integrity and character through eleven warm truths, moving from private moments of honesty to the deep peace of a clear conscience. Anchored by the insight that character is built in the empty hallway after the lights go out.",
+      "template": "truths",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "gentle morning haze valley",
-      "cotton grass field",
-      "soft fog over hills",
-      "pale peonies",
-      "coastal cliffs sunlight",
-      "butterfly on flower",
-      "steaming tea cup morning sun",
-      "autumn leaves sunlight",
-      "golden autumn trees",
-      "orange flowers sunlight",
-      "yellow wildflowers"
-    ],
     [
       "wheat stalks soft focus",
       "dandelion seeds soft light",
@@ -464,6 +461,19 @@
       "sunrise over mountains",
       "sunset over ocean",
       "sunset behind palm leaves"
+    ],
+    [
+      "cotton grass field",
+      "layered clouds soft light",
+      "quiet beach at dawn",
+      "white hydrangea flowers",
+      "sunlit leaves",
+      "steaming tea cup morning sun",
+      "green meadow sunlight",
+      "rose garden morning",
+      "golden sunlight forest",
+      "golden wheat field",
+      "golden reeds lake"
     ]
   ]
 }
