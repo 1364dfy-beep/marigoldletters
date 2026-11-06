@@ -339,24 +339,20 @@
       "summary": "An exploration of personal integrity and character through eleven warm truths, moving from private moments of honesty to the deep peace of a clear conscience. Anchored by the insight that character is built in the empty hallway after the lights go out.",
       "template": "truths",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 35,
+      "date": "2026-11-06",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "Dear You Who Wonders Where Everyone Went",
+      "summary": "Episode 35 is an emotional second-person letter addressing the grief of lost friendships and the transition toward finding people who stay through the quiet seasons. Anchored by the realization that an empty seat at your table makes room for hands that actually know how to hold yours.",
+      "template": "letter",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "wheat stalks soft focus",
-      "dandelion seeds soft light",
-      "white hydrangea flowers",
-      "soft sand dunes light",
-      "palm leaves sunlight",
-      "cherry blossom branch",
-      "fern forest sunlight",
-      "tulip field",
-      "honey colored light field",
-      "glowing sunset beach",
-      "golden hills sunset",
-      "golden sunlight forest"
-    ],
     [
       "sheer curtains window light",
       "quiet misty lake",
@@ -474,6 +470,20 @@
       "golden sunlight forest",
       "golden wheat field",
       "golden reeds lake"
+    ],
+    [
+      "white feather soft light",
+      "dried grass soft light",
+      "soft pink magnolia",
+      "wheat stalks soft focus",
+      "autumn leaves sunlight",
+      "vineyard rows sunlight",
+      "bird on branch sunrise",
+      "wildflower meadow",
+      "golden hour meadow",
+      "golden autumn trees",
+      "sunflower close up",
+      "golden hills sunset"
     ]
   ]
 }
