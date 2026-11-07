@@ -349,20 +349,20 @@
       "summary": "Episode 35 is an emotional second-person letter addressing the grief of lost friendships and the transition toward finding people who stay through the quiet seasons. Anchored by the realization that an empty seat at your table makes room for hands that actually know how to hold yours.",
       "template": "letter",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 36,
+      "date": "2026-11-07",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "The Weight of the Front Door Key",
+      "summary": "A first-person micro-story about leaving a relationship, surviving the heavy silence, and realizing healing is simply breathing easy again. Anchored by the insight that healing is not a lightning strike, but finally exhaling a breath you held for years.",
+      "template": "story",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "sheer curtains window light",
-      "quiet misty lake",
-      "white daisies meadow",
-      "lush green valley",
-      "green meadow sunlight",
-      "wildflower meadow",
-      "tulips golden light",
-      "golden wheat field"
-    ],
     [
       "bare branches soft sunrise",
       "pale pink clouds",
@@ -484,6 +484,19 @@
       "golden autumn trees",
       "sunflower close up",
       "golden hills sunset"
+    ],
+    [
+      "light mist forest sunbeams",
+      "quiet misty lake",
+      "still pond reflection",
+      "gentle morning haze valley",
+      "ocean waves sunlit",
+      "sunflower field",
+      "tulip field",
+      "rolling green hills",
+      "sunrise lake reflection",
+      "golden clouds sunrise",
+      "honey colored light field"
     ]
   ]
 }
