@@ -359,24 +359,20 @@
       "summary": "A first-person micro-story about leaving a relationship, surviving the heavy silence, and realizing healing is simply breathing easy again. Anchored by the insight that healing is not a lightning strike, but finally exhaling a breath you held for years.",
       "template": "story",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 37,
+      "date": "2026-11-08",
+      "arc_title": "kindness and respect in relationships",
+      "part": 1,
+      "title": "Dear You Who Wonders If Kindness Is Still Worth It",
+      "summary": "Episode 37 is a second-person letter addressing the exhaustion of being the kind one in relationships, moving toward the realization that true respect is a quiet room where your voice does not have to fight.",
+      "template": "letter",
+      "theme": "kindness and respect in relationships"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "bare branches soft sunrise",
-      "pale pink clouds",
-      "seashells on sand morning",
-      "frosted leaves sunrise",
-      "ocean waves sunlit",
-      "stone path garden sunlight",
-      "vineyard rows sunlight",
-      "mountain lake sunrise",
-      "sunset over ocean",
-      "lavender field sunset",
-      "sparkling sunlit water",
-      "hay bales golden hour"
-    ],
     [
       "white wildflowers soft light",
       "dew on grass",
@@ -497,6 +493,20 @@
       "sunrise lake reflection",
       "golden clouds sunrise",
       "honey colored light field"
+    ],
+    [
+      "white wildflowers soft light",
+      "dandelion seeds soft light",
+      "pale peonies",
+      "dew on grass",
+      "pink magnolia tree",
+      "lush green valley",
+      "cherry blossom branch",
+      "coastal cliffs sunlight",
+      "lemon tree sunlight",
+      "hay bales golden hour",
+      "sunlit dandelion",
+      "cosmos flowers sunset"
     ]
   ]
 }
