@@ -369,24 +369,20 @@
       "summary": "Episode 37 is a second-person letter addressing the exhaustion of being the kind one in relationships, moving toward the realization that true respect is a quiet room where your voice does not have to fight.",
       "template": "letter",
       "theme": "kindness and respect in relationships"
+    },
+    {
+      "num": 38,
+      "date": "2026-11-09",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "Five Quiet Signs of Real, Steady Love",
+      "summary": "Episode 38 outlines five quiet, concrete signs of steady love, contrasting the anxiety of unstable dynamics with the deep restfulness of a healthy relationship. Anchored by the quote that real love feels less like a fire to feed and more like a warm room.",
+      "template": "signs",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white wildflowers soft light",
-      "dew on grass",
-      "lavender field haze",
-      "morning mist over field",
-      "autumn leaves sunlight",
-      "sunlit leaves",
-      "pink magnolia tree",
-      "olive grove sunlight",
-      "warm sunbeams through trees",
-      "rainbow over green field",
-      "sunrise over mountains",
-      "sunflower close up"
-    ],
     [
       "light mist forest sunbeams",
       "white hydrangea flowers",
@@ -507,6 +503,20 @@
       "hay bales golden hour",
       "sunlit dandelion",
       "cosmos flowers sunset"
+    ],
+    [
+      "quiet beach at dawn",
+      "frosted leaves sunrise",
+      "pale sky at dawn",
+      "layered clouds soft light",
+      "butterfly on flower",
+      "folded blanket window light",
+      "steaming tea cup morning sun",
+      "sunlit forest path",
+      "orange sky sunset clouds",
+      "golden reeds lake",
+      "sunset over ocean",
+      "lavender field sunset"
     ]
   ]
 }
