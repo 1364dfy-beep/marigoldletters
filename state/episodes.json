@@ -379,24 +379,20 @@
       "summary": "Episode 38 outlines five quiet, concrete signs of steady love, contrasting the anxiety of unstable dynamics with the deep restfulness of a healthy relationship. Anchored by the quote that real love feels less like a fire to feed and more like a warm room.",
       "template": "signs",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 39,
+      "date": "2026-11-09",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Dear You Who Built Your Career in the Quiet",
+      "summary": "An emotional second-person letter addressing the quiet exhaustion of professional striving and the realization that true ambition is an honest craft. Hook: 'Dear you, who still works late on a Tuesday because you care about the shape of things.' Quote: 'True professional integrity is simply building something good enough to outlast your doubts.'",
+      "template": "letter",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "light mist forest sunbeams",
-      "white hydrangea flowers",
-      "pastel sunrise sky",
-      "white feather soft light",
-      "sunlit forest path",
-      "palm leaves sunlight",
-      "rose garden morning",
-      "calm lake morning",
-      "golden hills sunset",
-      "lemon tree sunlight",
-      "golden hour meadow",
-      "golden reeds lake"
-    ],
     [
       "dried grass soft light",
       "white daisies meadow",
@@ -517,6 +513,19 @@
       "golden reeds lake",
       "sunset over ocean",
       "lavender field sunset"
+    ],
+    [
+      "white daisies meadow",
+      "wheat stalks soft focus",
+      "morning mist over field",
+      "sheer curtains window light",
+      "olive grove sunlight",
+      "fern forest sunlight",
+      "green meadow sunlight",
+      "daffodils field",
+      "sunflower close up",
+      "sparkling sunlit water",
+      "tulips golden light"
     ]
   ]
 }
