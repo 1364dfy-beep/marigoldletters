@@ -389,23 +389,20 @@
       "summary": "An emotional second-person letter addressing the quiet exhaustion of professional striving and the realization that true ambition is an honest craft. Hook: 'Dear you, who still works late on a Tuesday because you care about the shape of things.' Quote: 'True professional integrity is simply building something good enough to outlast your doubts.'",
       "template": "letter",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 40,
+      "date": "2026-11-10",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "Quiet Truths About Real Friendship and Staying Power",
+      "summary": "Eleven warm truths about recognizing genuine friendship and loyalty, moving from the exhaustion of one-sided effort to the deep rest of being truly known. Anchored by the insight that true friendship is a quiet room where your heart finally takes off its shoes.",
+      "template": "truths",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "dried grass soft light",
-      "white daisies meadow",
-      "layered clouds soft light",
-      "gentle morning haze valley",
-      "wildflower meadow",
-      "daffodils field",
-      "rolling green hills",
-      "poppy field",
-      "sunlit dandelion",
-      "cosmos flowers sunset",
-      "orange flowers sunlight"
-    ],
     [
       "still pond reflection",
       "dandelion seeds soft light",
@@ -526,6 +523,19 @@
       "sunflower close up",
       "sparkling sunlit water",
       "tulips golden light"
+    ],
+    [
+      "calm shoreline morning",
+      "light mist forest sunbeams",
+      "gentle morning haze valley",
+      "cotton grass field",
+      "pink peony close up",
+      "ocean waves sunlit",
+      "sunlit leaves",
+      "bird on branch sunrise",
+      "golden autumn trees",
+      "honey colored light field",
+      "golden hour meadow"
     ]
   ]
 }
