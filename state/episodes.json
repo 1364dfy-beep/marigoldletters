@@ -399,24 +399,20 @@
       "summary": "Eleven warm truths about recognizing genuine friendship and loyalty, moving from the exhaustion of one-sided effort to the deep rest of being truly known. Anchored by the insight that true friendship is a quiet room where your heart finally takes off its shoes.",
       "template": "truths",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 41,
+      "date": "2026-11-12",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Dear You Who Chooses the Right Thing in the Dark",
+      "summary": "An emotional letter addressing the quiet effort of maintaining integrity when unobserved, moving from the fatigue of doing the right thing alone to the deep peace of a clear conscience. Anchored by the insight that integrity is simply the art of keeping your word to yourself when the room goes dark.",
+      "template": "letter",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "still pond reflection",
-      "dandelion seeds soft light",
-      "soft fog over hills",
-      "soft pink magnolia",
-      "pink peony close up",
-      "sunflower field",
-      "stone path garden sunlight",
-      "bird on branch sunrise",
-      "golden clouds sunrise",
-      "sparkling sunlit water",
-      "glowing sunset beach",
-      "tulips golden light"
-    ],
     [
       "lavender field haze",
       "bare branches soft sunrise",
@@ -536,6 +532,19 @@
       "golden autumn trees",
       "honey colored light field",
       "golden hour meadow"
+    ],
+    [
+      "pale peonies",
+      "pale pink clouds",
+      "white hydrangea flowers",
+      "soft fog over hills",
+      "rose garden morning",
+      "mountain lake sunrise",
+      "tulip field",
+      "autumn leaves sunlight",
+      "orange flowers sunlight",
+      "amber leaves backlit",
+      "hay bales golden hour"
     ]
   ]
 }
