@@ -409,22 +409,20 @@
       "summary": "An emotional letter addressing the quiet effort of maintaining integrity when unobserved, moving from the fatigue of doing the right thing alone to the deep peace of a clear conscience. Anchored by the insight that integrity is simply the art of keeping your word to yourself when the room goes dark.",
       "template": "letter",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 42,
+      "date": "2026-11-13",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "The Morning I Stopped Reaching for My Phone",
+      "summary": "A first-person micro-story about healing after heartbreak, moving from the obsessive waiting for a text to the quiet peace of reclaiming one's own space. Anchored by the insight that healing is simply forgetting to look back at the door.",
+      "template": "story",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "lavender field haze",
-      "bare branches soft sunrise",
-      "quiet misty lake",
-      "pale pink clouds",
-      "tulip field",
-      "folded blanket window light",
-      "cherry blossom branch",
-      "orange sky sunset clouds",
-      "lavender field sunset",
-      "yellow wildflowers"
-    ],
     [
       "seashells on sand morning",
       "soft sand dunes light",
@@ -545,6 +543,19 @@
       "orange flowers sunlight",
       "amber leaves backlit",
       "hay bales golden hour"
+    ],
+    [
+      "frosted leaves sunrise",
+      "pale sky at dawn",
+      "bare branches soft sunrise",
+      "seashells on sand morning",
+      "coastal cliffs sunlight",
+      "cherry blossom branch",
+      "stone path garden sunlight",
+      "vineyard rows sunlight",
+      "orange sky sunset clouds",
+      "rainbow over green field",
+      "sunset behind palm leaves"
     ]
   ]
 }
