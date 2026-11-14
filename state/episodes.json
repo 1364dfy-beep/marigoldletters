@@ -419,24 +419,20 @@
       "summary": "A first-person micro-story about healing after heartbreak, moving from the obsessive waiting for a text to the quiet peace of reclaiming one's own space. Anchored by the insight that healing is simply forgetting to look back at the door.",
       "template": "story",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 43,
+      "date": "2026-11-14",
+      "arc_title": "self-worth and self-love",
+      "part": 1,
+      "title": "Dear You Who Wonders If You Are Too Much to Love",
+      "summary": "Episode 43 is a second-person letter addressing the habit of shrinking oneself to keep others comfortable, moving toward the realization that true self-worth means taking up space without apology. Anchored by the insight that your softness is not a flaw to be corrected, but a rare kind of home.",
+      "template": "letter",
+      "theme": "self-worth and self-love"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "seashells on sand morning",
-      "soft sand dunes light",
-      "frosted leaves sunrise",
-      "pale sky at dawn",
-      "fern forest sunlight",
-      "calm lake morning",
-      "palm leaves sunlight",
-      "mountain lake sunrise",
-      "warm sunbeams through trees",
-      "sunrise over mountains",
-      "sunset over ocean",
-      "sunset behind palm leaves"
-    ],
     [
       "cotton grass field",
       "layered clouds soft light",
@@ -556,6 +552,19 @@
       "orange sky sunset clouds",
       "rainbow over green field",
       "sunset behind palm leaves"
+    ],
+    [
+      "white daisies meadow",
+      "morning mist over field",
+      "pastel sunrise sky",
+      "wheat stalks soft focus",
+      "calm lake morning",
+      "pink magnolia tree",
+      "palm leaves sunlight",
+      "green meadow sunlight",
+      "glowing sunset beach",
+      "sparkling sunlit water",
+      "golden hills sunset"
     ]
   ]
 }
