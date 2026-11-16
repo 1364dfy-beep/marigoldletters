@@ -439,24 +439,20 @@
       "summary": "An episode in the 'signs' format outlining four quiet shifts in healthy ambition, moving away from burnout culture toward sustainable craft. Anchored by the insight that real ambition is an honest promise to build something that lasts, not a race to burn out first.",
       "template": "signs",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 45,
+      "date": "2026-11-16",
+      "arc_title": "gratitude and slowing down",
+      "part": 1,
+      "title": "Dear You Who Forgot How to Rest Without Guilt",
+      "summary": "An emotional second-person letter addressing the guilt of rest and the pressure of constant productivity, moving toward the realization that gratitude is simply pausing to let good things catch up. Hook: Dear you, who still feels guilty for sitting down before the list is crossed off. Quote: Gratitude is simply the art of pausing to let the good things catch up to you.",
+      "template": "letter",
+      "theme": "gratitude and slowing down"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white feather soft light",
-      "dried grass soft light",
-      "soft pink magnolia",
-      "wheat stalks soft focus",
-      "autumn leaves sunlight",
-      "vineyard rows sunlight",
-      "bird on branch sunrise",
-      "wildflower meadow",
-      "golden hour meadow",
-      "golden autumn trees",
-      "sunflower close up",
-      "golden hills sunset"
-    ],
     [
       "light mist forest sunbeams",
       "quiet misty lake",
@@ -575,6 +571,20 @@
       "marigold flowers",
       "golden sunlight forest",
       "tulips golden light"
+    ],
+    [
+      "pale pink clouds",
+      "sheer curtains window light",
+      "pale peonies",
+      "dew on grass",
+      "fern forest sunlight",
+      "olive grove sunlight",
+      "sunlit forest path",
+      "pink peony close up",
+      "orange flowers sunlight",
+      "golden wheat field",
+      "amber leaves backlit",
+      "cosmos flowers sunset"
     ]
   ]
 }
