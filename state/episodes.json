@@ -449,23 +449,20 @@
       "summary": "An emotional second-person letter addressing the guilt of rest and the pressure of constant productivity, moving toward the realization that gratitude is simply pausing to let good things catch up. Hook: Dear you, who still feels guilty for sitting down before the list is crossed off. Quote: Gratitude is simply the art of pausing to let the good things catch up to you.",
       "template": "letter",
       "theme": "gratitude and slowing down"
+    },
+    {
+      "num": 46,
+      "date": "2026-11-18",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Quiet Truths About Character and Standing Alone",
+      "summary": "Eleven warm truths about maintaining personal integrity when unobserved, moving from the illusion of public applause to the deep peace of a private standard. Hook: Character is revealed long after the applause has faded.",
+      "template": "truths",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "light mist forest sunbeams",
-      "quiet misty lake",
-      "still pond reflection",
-      "gentle morning haze valley",
-      "ocean waves sunlit",
-      "sunflower field",
-      "tulip field",
-      "rolling green hills",
-      "sunrise lake reflection",
-      "golden clouds sunrise",
-      "honey colored light field"
-    ],
     [
       "white wildflowers soft light",
       "dandelion seeds soft light",
@@ -585,6 +582,19 @@
       "golden wheat field",
       "amber leaves backlit",
       "cosmos flowers sunset"
+    ],
+    [
+      "calm shoreline morning",
+      "still pond reflection",
+      "frosted leaves sunrise",
+      "light mist forest sunbeams",
+      "ocean waves sunlit",
+      "steaming tea cup morning sun",
+      "butterfly on flower",
+      "rolling green hills",
+      "golden hour meadow",
+      "sunset over ocean",
+      "yellow wildflowers"
     ]
   ]
 }
