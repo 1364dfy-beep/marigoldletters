@@ -459,24 +459,20 @@
       "summary": "Eleven warm truths about maintaining personal integrity when unobserved, moving from the illusion of public applause to the deep peace of a private standard. Hook: Character is revealed long after the applause has faded.",
       "template": "truths",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 47,
+      "date": "2026-11-20",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "Dear You Who Still Wakes Up Reaching for What Is Gone",
+      "summary": "Episode 47 is an emotional second-person letter addressing the early, raw stages of healing after heartbreak, moving from the obsessive reach for a phone to the quiet realization of self-restoration. Hook: 'Dear you, who still wakes up reaching for a phone that stayed silent all night.'",
+      "template": "letter",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white wildflowers soft light",
-      "dandelion seeds soft light",
-      "pale peonies",
-      "dew on grass",
-      "pink magnolia tree",
-      "lush green valley",
-      "cherry blossom branch",
-      "coastal cliffs sunlight",
-      "lemon tree sunlight",
-      "hay bales golden hour",
-      "sunlit dandelion",
-      "cosmos flowers sunset"
-    ],
     [
       "quiet beach at dawn",
       "frosted leaves sunrise",
@@ -595,6 +591,19 @@
       "golden hour meadow",
       "sunset over ocean",
       "yellow wildflowers"
+    ],
+    [
+      "lavender field haze",
+      "soft fog over hills",
+      "pale sky at dawn",
+      "quiet misty lake",
+      "palm leaves sunlight",
+      "calm lake morning",
+      "rose garden morning",
+      "mountain lake sunrise",
+      "lemon tree sunlight",
+      "honey colored light field",
+      "orange sky sunset clouds"
     ]
   ]
 }
