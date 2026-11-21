@@ -469,24 +469,20 @@
       "summary": "Episode 47 is an emotional second-person letter addressing the early, raw stages of healing after heartbreak, moving from the obsessive reach for a phone to the quiet realization of self-restoration. Hook: 'Dear you, who still wakes up reaching for a phone that stayed silent all night.'",
       "template": "letter",
       "theme": "healing after heartbreak"
+    },
+    {
+      "num": 48,
+      "date": "2026-11-21",
+      "arc_title": "kindness and respect in relationships",
+      "part": 1,
+      "title": "The Morning He Handed Me My Coat Instead of an Argument",
+      "summary": "A first-person micro-story about experiencing true respect and safety during a disagreement instead of punishment. Hook: The kitchen was freezing when I walked in, but he had already turned on the small heater. Quote: Real respect is the quiet restraint someone shows when they have every chance to make you feel small, and choose not to.",
+      "template": "story",
+      "theme": "kindness and respect in relationships"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "quiet beach at dawn",
-      "frosted leaves sunrise",
-      "pale sky at dawn",
-      "layered clouds soft light",
-      "butterfly on flower",
-      "folded blanket window light",
-      "steaming tea cup morning sun",
-      "sunlit forest path",
-      "orange sky sunset clouds",
-      "golden reeds lake",
-      "sunset over ocean",
-      "lavender field sunset"
-    ],
     [
       "white daisies meadow",
       "wheat stalks soft focus",
@@ -604,6 +600,18 @@
       "lemon tree sunlight",
       "honey colored light field",
       "orange sky sunset clouds"
+    ],
+    [
+      "morning mist over field",
+      "seashells on sand morning",
+      "dandelion seeds soft light",
+      "soft sand dunes light",
+      "lush green valley",
+      "autumn leaves sunlight",
+      "pink magnolia tree",
+      "golden clouds sunrise",
+      "golden hills sunset",
+      "lavender field sunset"
     ]
   ]
 }
