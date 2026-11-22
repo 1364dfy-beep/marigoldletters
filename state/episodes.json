@@ -479,23 +479,20 @@
       "summary": "A first-person micro-story about experiencing true respect and safety during a disagreement instead of punishment. Hook: The kitchen was freezing when I walked in, but he had already turned on the small heater. Quote: Real respect is the quiet restraint someone shows when they have every chance to make you feel small, and choose not to.",
       "template": "story",
       "theme": "kindness and respect in relationships"
+    },
+    {
+      "num": 49,
+      "date": "2026-11-22",
+      "arc_title": "friendship and loyalty",
+      "part": 1,
+      "title": "Dear You Who Wonders Where Everyone Went When the Room Got Dark",
+      "summary": "An emotional second-person letter addressing the quiet pain of being a reliable friend to those who do not stay, moving toward the realization that true loyalty is a mutual safe harbor. Anchored by the insight that real friendship is a quiet room where neither of you has to pretend to be unbreakable.",
+      "template": "letter",
+      "theme": "friendship and loyalty"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white daisies meadow",
-      "wheat stalks soft focus",
-      "morning mist over field",
-      "sheer curtains window light",
-      "olive grove sunlight",
-      "fern forest sunlight",
-      "green meadow sunlight",
-      "daffodils field",
-      "sunflower close up",
-      "sparkling sunlit water",
-      "tulips golden light"
-    ],
     [
       "calm shoreline morning",
       "light mist forest sunbeams",
@@ -612,6 +609,20 @@
       "golden clouds sunrise",
       "golden hills sunset",
       "lavender field sunset"
+    ],
+    [
+      "bare branches soft sunrise",
+      "white daisies meadow",
+      "white wildflowers soft light",
+      "wheat stalks soft focus",
+      "bird on branch sunrise",
+      "fern forest sunlight",
+      "wildflower meadow",
+      "coastal cliffs sunlight",
+      "sunset behind palm leaves",
+      "hay bales golden hour",
+      "sunrise over mountains",
+      "golden autumn trees"
     ]
   ]
 }
