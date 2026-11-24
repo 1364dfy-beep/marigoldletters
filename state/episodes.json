@@ -489,23 +489,20 @@
       "summary": "An emotional second-person letter addressing the quiet pain of being a reliable friend to those who do not stay, moving toward the realization that true loyalty is a mutual safe harbor. Anchored by the insight that real friendship is a quiet room where neither of you has to pretend to be unbreakable.",
       "template": "letter",
       "theme": "friendship and loyalty"
+    },
+    {
+      "num": 50,
+      "date": "2026-11-24",
+      "arc_title": "ambition and purpose (professional growth, said warmly)",
+      "part": 1,
+      "title": "Five Quiet Signs Your Ambition Is Softening into Purpose",
+      "summary": "An episode in the 'signs' format outlining five quiet shifts in healthy ambition, moving away from burnout culture toward sustainable craft and deep purpose. Hook: Five quiet signs your ambition is changing from a race into a steady light. Quote: Real ambition is an act of care, not a weapon you use against your own soul.",
+      "template": "signs",
+      "theme": "ambition and purpose (professional growth, said warmly)"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "calm shoreline morning",
-      "light mist forest sunbeams",
-      "gentle morning haze valley",
-      "cotton grass field",
-      "pink peony close up",
-      "ocean waves sunlit",
-      "sunlit leaves",
-      "bird on branch sunrise",
-      "golden autumn trees",
-      "honey colored light field",
-      "golden hour meadow"
-    ],
     [
       "pale peonies",
       "pale pink clouds",
@@ -623,6 +620,20 @@
       "hay bales golden hour",
       "sunrise over mountains",
       "golden autumn trees"
+    ],
+    [
+      "white hydrangea flowers",
+      "frosted leaves sunrise",
+      "sheer curtains window light",
+      "light mist forest sunbeams",
+      "olive grove sunlight",
+      "green meadow sunlight",
+      "ocean waves sunlit",
+      "daffodils field",
+      "sunflower close up",
+      "tulips golden light",
+      "sparkling sunlit water",
+      "warm sunbeams through trees"
     ]
   ]
 }
