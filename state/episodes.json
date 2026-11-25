@@ -499,23 +499,20 @@
       "summary": "An episode in the 'signs' format outlining five quiet shifts in healthy ambition, moving away from burnout culture toward sustainable craft and deep purpose. Hook: Five quiet signs your ambition is changing from a race into a steady light. Quote: Real ambition is an act of care, not a weapon you use against your own soul.",
       "template": "signs",
       "theme": "ambition and purpose (professional growth, said warmly)"
+    },
+    {
+      "num": 51,
+      "date": "2026-11-25",
+      "arc_title": "what real, steady love looks like",
+      "part": 1,
+      "title": "Dear You Who Wonders What Steady Love Actually Feels Like",
+      "summary": "An emotional second-person letter addressing the transition from chaotic attachment to steady, safe love. Hook: Dear you, who is waiting for the other shoe to drop. Quote: Real love is not a fire that burns you to ash, but a hearth you can actually sit beside.",
+      "template": "letter",
+      "theme": "what real, steady love looks like"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "pale peonies",
-      "pale pink clouds",
-      "white hydrangea flowers",
-      "soft fog over hills",
-      "rose garden morning",
-      "mountain lake sunrise",
-      "tulip field",
-      "autumn leaves sunlight",
-      "orange flowers sunlight",
-      "amber leaves backlit",
-      "hay bales golden hour"
-    ],
     [
       "frosted leaves sunrise",
       "pale sky at dawn",
@@ -634,6 +631,20 @@
       "tulips golden light",
       "sparkling sunlit water",
       "warm sunbeams through trees"
+    ],
+    [
+      "cotton grass field",
+      "layered clouds soft light",
+      "pastel sunrise sky",
+      "lavender field haze",
+      "cherry blossom branch",
+      "pink peony close up",
+      "sunflower field",
+      "folded blanket window light",
+      "honey colored light field",
+      "cosmos flowers sunset",
+      "sunset over ocean",
+      "glowing sunset beach"
     ]
   ]
 }
