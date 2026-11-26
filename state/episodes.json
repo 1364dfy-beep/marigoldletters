@@ -509,23 +509,20 @@
       "summary": "An emotional second-person letter addressing the transition from chaotic attachment to steady, safe love. Hook: Dear you, who is waiting for the other shoe to drop. Quote: Real love is not a fire that burns you to ash, but a hearth you can actually sit beside.",
       "template": "letter",
       "theme": "what real, steady love looks like"
+    },
+    {
+      "num": 52,
+      "date": "2026-11-26",
+      "arc_title": "integrity and character when nobody is watching",
+      "part": 1,
+      "title": "Quiet Truths About the Life You Build When the Lights Are Off",
+      "summary": "An episode of warm hard truths about personal integrity and unobserved character, anchored by the insight that true integrity is choosing the harder, quiet right when the easier wrong is completely invisible.",
+      "template": "truths",
+      "theme": "integrity and character when nobody is watching"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "frosted leaves sunrise",
-      "pale sky at dawn",
-      "bare branches soft sunrise",
-      "seashells on sand morning",
-      "coastal cliffs sunlight",
-      "cherry blossom branch",
-      "stone path garden sunlight",
-      "vineyard rows sunlight",
-      "orange sky sunset clouds",
-      "rainbow over green field",
-      "sunset behind palm leaves"
-    ],
     [
       "white daisies meadow",
       "morning mist over field",
@@ -645,6 +642,19 @@
       "cosmos flowers sunset",
       "sunset over ocean",
       "glowing sunset beach"
+    ],
+    [
+      "dandelion seeds soft light",
+      "soft pink magnolia",
+      "quiet misty lake",
+      "calm shoreline morning",
+      "autumn leaves sunlight",
+      "butterfly on flower",
+      "palm leaves sunlight",
+      "poppy field",
+      "sunlit dandelion",
+      "lemon tree sunlight",
+      "rainbow over green field"
     ]
   ]
 }
