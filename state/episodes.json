@@ -519,23 +519,20 @@
       "summary": "An episode of warm hard truths about personal integrity and unobserved character, anchored by the insight that true integrity is choosing the harder, quiet right when the easier wrong is completely invisible.",
       "template": "truths",
       "theme": "integrity and character when nobody is watching"
+    },
+    {
+      "num": 53,
+      "date": "2026-11-27",
+      "arc_title": "gratitude and slowing down",
+      "part": 1,
+      "title": "Dear You Who Forgot to Look Up From the Phone",
+      "summary": "An emotional second-person letter addressing the blur of modern busyness and constant worry, moving toward the quiet art of noticing ordinary beauty. Hooked by staring at a glowing rectangle, and anchored by the insight that gratitude is simply letting your eyes linger on the ordinary until it feels like a gift.",
+      "template": "letter",
+      "theme": "gratitude and slowing down"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "white daisies meadow",
-      "morning mist over field",
-      "pastel sunrise sky",
-      "wheat stalks soft focus",
-      "calm lake morning",
-      "pink magnolia tree",
-      "palm leaves sunlight",
-      "green meadow sunlight",
-      "glowing sunset beach",
-      "sparkling sunlit water",
-      "golden hills sunset"
-    ],
     [
       "dried grass soft light",
       "layered clouds soft light",
@@ -655,6 +652,20 @@
       "sunlit dandelion",
       "lemon tree sunlight",
       "rainbow over green field"
+    ],
+    [
+      "quiet beach at dawn",
+      "soft fog over hills",
+      "morning mist over field",
+      "white daisies meadow",
+      "calm lake morning",
+      "sunlit forest path",
+      "wildflower meadow",
+      "rolling green hills",
+      "golden clouds sunrise",
+      "golden sunlight forest",
+      "amber leaves backlit",
+      "yellow wildflowers"
     ]
   ]
 }
