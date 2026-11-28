@@ -529,23 +529,20 @@
       "summary": "An emotional second-person letter addressing the blur of modern busyness and constant worry, moving toward the quiet art of noticing ordinary beauty. Hooked by staring at a glowing rectangle, and anchored by the insight that gratitude is simply letting your eyes linger on the ordinary until it feels like a gift.",
       "template": "letter",
       "theme": "gratitude and slowing down"
+    },
+    {
+      "num": 54,
+      "date": "2026-11-28",
+      "arc_title": "healing after heartbreak",
+      "part": 1,
+      "title": "The Morning I Stopped Saving the Voicemails",
+      "summary": "A first-person micro-story about healing after heartbreak, moving from the obsessive saving of old voicemails to the quiet, earned peace of a Tuesday morning without waiting.",
+      "template": "story",
+      "theme": "healing after heartbreak"
     }
   ],
   "arc": null,
   "photo_history": [
-    [
-      "dried grass soft light",
-      "layered clouds soft light",
-      "gentle morning haze valley",
-      "dandelion seeds soft light",
-      "sunlit leaves",
-      "wildflower meadow",
-      "daffodils field",
-      "bird on branch sunrise",
-      "marigold flowers",
-      "golden sunlight forest",
-      "tulips golden light"
-    ],
     [
       "pale pink clouds",
       "sheer curtains window light",
@@ -666,6 +663,18 @@
       "golden sunlight forest",
       "amber leaves backlit",
       "yellow wildflowers"
+    ],
+    [
+      "wheat stalks soft focus",
+      "pale pink clouds",
+      "sheer curtains window light",
+      "light mist forest sunbeams",
+      "steaming tea cup morning sun",
+      "olive grove sunlight",
+      "vineyard rows sunlight",
+      "sunrise over mountains",
+      "lavender field sunset",
+      "sparkling sunlit water"
     ]
   ]
 }
